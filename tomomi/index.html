@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>やず朋味 | ツラい恋・人間関係から脱出。自分らしい人生を</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-purple: #3e0b52;
+            --royal-purple: #1a0621;
+            --luxury-gold: #d4af37;
+            --soft-purple: #8e24aa;
+            --bg-white: #ffffff;
+            --text-dark: #1a0621;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .font-serif { font-family: 'Shippori Mincho', serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+
+        /* 金色のグラデーションテキスト */
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #b38728, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* 妖艶な紫のアクセント */
+        .purple-accent { color: var(--deep-purple); }
+
+        /* ホワイトラグジュアリーなカード */
+        .luxury-card {
+            background: #ffffff;
+            border: 1px solid rgba(62, 11, 82, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .luxury-card:hover {
+            border-color: var(--luxury-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(62, 11, 82, 0.1);
+        }
+
+        /* お写真のゴールドフレーム */
+        .gold-frame {
+            position: relative;
+            padding: 12px;
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
+            box-shadow: 0 20px 50px rgba(62, 11, 82, 0.15);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 30%, #f9f0ff 0%, #ffffff 100%);
+        }
+
+        .btn-purple {
+            background: linear-gradient(45deg, var(--deep-purple), var(--royal-purple));
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn-purple:hover {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(62, 11, 82, 0.3);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--luxury-gold), transparent);
+        }
+    </style>
+</head>
+<body class="hero-gradient">
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="font-cinzel text-2xl tracking-[0.4em] purple-accent font-bold">TOMOMI YAZU</span>
+                <span class="text-[8px] tracking-[0.5em] text-amber-600 -mt-1 uppercase">Luxury Counseling</span>
+            </div>
+            <nav class="hidden lg:flex space-x-10 text-[10px] tracking-[0.3em] font-bold uppercase text-purple-900">
+                <a href="#intro" class="hover:text-amber-600 transition">Message</a>
+                <a href="#about" class="hover:text-amber-600 transition">Profile</a>
+                <a href="#program" class="hover:text-amber-600 transition">Programs</a>
+                <a href="#testimonials" class="hover:text-amber-600 transition">Voice</a>
+                <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="px-6 py-2 bg-purple-900 text-white rounded-full hover:bg-amber-700 transition">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center z-10">
+            <div class="order-2 lg:order-1">
+                <p class="font-cinzel text-xs tracking-[0.5em] text-amber-600 mb-6 font-bold uppercase">Irreplaceable Presence</p>
+                <h1 class="text-4xl md:text-6xl font-serif leading-[1.3] mb-8 text-purple-900">
+                    ツラい恋から脱出し、<br>
+                    <span class="gold-text italic">自分らしい人生を。</span>
+                </h1>
+                <p class="text-lg md:text-xl font-light text-purple-800/70 leading-loose mb-12 border-l-2 border-amber-500 pl-6">
+                    愛されるための愛し方を教えます。<br>
+                    17年の経験と統計学で、本来の魅力を引き出し<br>
+                    あなたが「かけがえのない存在」であることを呼び覚ます。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#program" class="btn-purple px-10 py-5 font-bold tracking-[0.2em] rounded-full text-center shadow-xl">
+                        プログラムを見る
+                    </a>
+                    <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="px-10 py-5 border border-purple-200 text-purple-900 rounded-full text-center hover:bg-purple-50 transition font-bold">
+                        空き日程を確認
+                    </a>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-md">
+                    <!-- アップのお写真 -->
+                    <div class="gold-frame rounded-full overflow-hidden aspect-square border-4 border-white">
+                        <img src="https://ydc1-d.kuku.lu/files/20260224-2149_576f55b28c95a0a48a6abf066aea448c.jpg" alt="やず朋味 アップ" class="w-full h-full object-cover">
+                    </div>
+                    <!-- 装飾 -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-purple-100 rounded-full -z-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="intro" class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif mb-12 italic text-purple-900">あなたは「かけがえのない存在」だと知る</h2>
+            <div class="space-y-8 text-lg text-purple-800/80 leading-[2.2] font-light">
+                <p>
+                    自分を肯定でき受け入れられることで、不安が解消され問題の解決につながります。<br>
+                    17年の経験から作られた独自のメソッドと統計学から、あなたの魅力を引き出していきます。
+                </p>
+                <p>
+                    パートナーが欲しい人は作り方を。恋愛の仕方が分からない人は、その原因を知り改善していきます。恋愛と言っても男女の恋愛だけではなく、家族に対する愛・自分に対する愛も一つの恋愛だと考えています。
+                </p>
+                <div class="section-divider my-12"></div>
+                <p class="text-2xl md:text-3xl font-serif gold-text italic">
+                    愛されるための愛し方を教えます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="about" class="py-32 bg-purple-50/50">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-20 items-center">
+            <div class="lg:col-span-6">
+                <div class="relative">
+                    <!-- レースのお写真 -->
+                    <div class="rounded-2xl overflow-hidden border-8 border-white shadow-2xl aspect-[3/4]">
+                        <img src="https://tdc1-d.kuku.lu/thumbs/20260224-2148_26a4ee7f3845a3bdf77779fc08e9bcd7.jpg" alt="やず朋味 レース衣装" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-amber-100/50 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+            <div class="lg:col-span-6">
+                <h3 class="font-cinzel text-amber-600 tracking-[0.4em] mb-4 font-bold">The Presence</h3>
+                <h2 class="text-4xl font-serif mb-10 leading-snug text-purple-900">自分を知り、好きになることで<br><span class="gold-text">人生は輝きを放つ。</span></h2>
+                <div class="space-y-6 text-purple-800/80 leading-loose">
+                    <p>
+                        かつて自己肯定感が低く恋愛もうまくいかず人生に迷っていた私。<br>
+                        しかし自分と向き合い自分自身を理解し認めることで、自信が生まれ恋愛も仕事も充実していくようになりました。
+                    </p>
+                    <p>
+                        今では毎日が楽しく幸せで充実しています。私の経験から自分自身を好きになることの大切さを伝えたい。自分を知り認めることで人生は大きく変わります。
+                    </p>
+                    <p class="text-lg font-bold text-purple-900 italic mt-8">
+                        あなたもぜひ自分自身を大切にして幸せな人生を歩んで下さい。私があなたの力になれることを願っています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="program" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="font-cinzel text-xs tracking-[0.5em] text-amber-600 mb-4 font-bold">Programs</h2>
+                <h3 class="text-4xl font-serif text-purple-900">本来の才能・能力や魅力を解放する</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 25min -->
+                <div class="luxury-card p-12 rounded-3xl flex flex-col text-center">
+                    <h3 class="text-xl font-serif mb-4 text-purple-900">25分お試しショートコース</h3>
+                    <p class="text-sm text-purple-800/60 mb-10 flex-grow">まずは今のお気持ちを。やず朋味との相性を確かめたい方へも。</p>
+                    <div class="mb-8 font-cinzel text-xl text-amber-700 italic">Trial Session</div>
+                    <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="w-full py-4 border border-purple-200 rounded-full text-xs tracking-widest hover:bg-purple-50 transition text-purple-900 font-bold uppercase">Reserve</a>
+                </div>
+                <!-- 110min (Main) -->
+                <div class="luxury-card p-12 rounded-3xl flex flex-col text-center bg-purple-900 scale-105 shadow-2xl relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1 bg-amber-500 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">Main Session</div>
+                    <h3 class="text-xl font-serif mb-4 text-white">110分メインセッション</h3>
+                    <p class="text-sm text-white/70 mb-10 flex-grow leading-relaxed">ツラい人間関係からの脱出。独自のメソッドで愛されるための愛し方を集中的に伝授します。</p>
+                    <div class="mb-8">
+                        <span class="text-3xl font-cinzel text-white">¥26,400</span>
+                    </div>
+                    <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="w-full py-5 bg-white text-purple-900 font-bold tracking-widest rounded-full shadow-lg hover:bg-amber-100 transition uppercase">Reserve Now</a>
+                </div>
+                <!-- 55min -->
+                <div class="luxury-card p-12 rounded-3xl flex flex-col text-center">
+                    <h3 class="text-xl font-serif mb-4 text-purple-900">55分潜在能力・魅力発見</h3>
+                    <p class="text-sm text-purple-800/60 mb-10 flex-grow">64の潜在能力・34の固有能力から、あなたが本来持っている魅力を分析。</p>
+                    <div class="mb-8 font-cinzel text-xl text-amber-700 italic">¥13,200</div>
+                    <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="w-full py-4 border border-purple-200 rounded-full text-xs tracking-widest hover:bg-purple-50 transition text-purple-900 font-bold uppercase">Reserve</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-32 bg-purple-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20">
+                <div>
+                    <h2 class="font-cinzel text-sm tracking-[0.4em] text-amber-500 mb-4 font-bold">Experience</h2>
+                    <h3 class="text-4xl font-serif">艶やかに人生を動かした方々</h3>
+                </div>
+                <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="text-xs tracking-widest text-amber-500 hover:text-white transition border-b border-amber-500/30 pb-1 mt-6">体験談 全3件をみる</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Testimonial -->
+                <div class="p-10 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                    <p class="text-amber-500 text-xs mb-6 font-bold">はなかさん（50代 / 夫婦・婚活）</p>
+                    <p class="leading-loose text-white/80 text-sm italic mb-8">
+                        「納得のアドバイスでした。夫を昔の武士のように思えてきて笑えました。不器用な男性へしてほしいことを具体的に伝えていこうと思います。」
+                    </p>
+                </div>
+                <!-- Testimonial -->
+                <div class="p-10 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                    <p class="text-amber-500 text-xs mb-6 font-bold">にゃんたさん（50代 / 自己肯定感）</p>
+                    <p class="leading-loose text-white/80 text-sm italic mb-8">
+                        「的確なアドバイスとすぐに実践できる対処方法を教えていただけました。とても暖かい感じでお話してくださり元気をもらえました。」
+                    </p>
+                </div>
+                <!-- Testimonial -->
+                <div class="p-10 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                    <p class="text-amber-500 text-xs mb-6 font-bold">ひさみさん（40代 / 恋愛）</p>
+                    <p class="leading-loose text-white/80 text-sm italic mb-8">
+                        「先生もお写真から拝見するに綺麗でモテるでしょうね。アドバイスがしっくりきました。次の恋愛は受け身にならず伝えていこうと思います。」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-purple-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-16">
+                <span class="font-cinzel text-4xl tracking-[0.6em] purple-accent font-bold">TOMOMI YAZU</span>
+                <p class="text-[10px] tracking-[0.4em] text-amber-600 mt-4 uppercase font-bold italic">Radiant Life Advisor</p>
+            </div>
+            
+            <p class="text-xs text-purple-900/40 max-w-2xl mx-auto mb-16 italic">
+                あなたが自分自身を大切にし、幸せな人生を歩めるよう、私が全力で力になります。
+            </p>
+
+            <div class="flex justify-center space-x-12 mb-16 text-[10px] tracking-[0.3em] font-bold text-purple-900 uppercase">
+                <a href="#about" class="hover:text-amber-600 transition">Profile</a>
+                <a href="#program" class="hover:text-amber-600 transition">Pricing</a>
+                <a href="https://www.voicemarche.jp/advisers/1254" target="_blank" class="hover:text-amber-600 transition">Booking</a>
+            </div>
+
+            <p class="text-[10px] text-purple-200 tracking-widest uppercase">© 2024 Tomomi Yazu. Radiant Presence.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
