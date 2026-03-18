@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masanori Fushimi | Official Site</title>
+    <meta name="description" content="Serial Entrepreneur, Artist, and Visionary. Masanori Fushimi's official portfolio.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Noto+Sans+JP:wght@100;300;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f4f4f4;
+            --accent-color: #d4af37; /* 品格のあるゴールド */
+            --sub-text: #a0a0a0;
+            --section-padding: 120px 20px;
+            --transition-slow: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+            letter-spacing: 0.05em;
+        }
+
+        /* --- Loading Animation --- */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, .en {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 0.2em;
+            color: var(--accent-color);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .hero-name {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.3em;
+            font-weight: 300;
+        }
+
+        .hero-name span {
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--sub-text);
+        }
+
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            color: var(--sub-text);
+            animation: pulse 2s infinite;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 30px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.8), transparent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+            font-weight: 300;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Layout Container --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section {
+            padding: var(--section-padding);
+        }
+
+        /* --- Profile Section --- */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .profile-image-wrap {
+            position: relative;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .profile-image-wrap img {
+            width: 100%;
+            filter: grayscale(40%);
+            transition: filter 0.5s;
+        }
+
+        .profile-image-wrap:hover img {
+            filter: grayscale(0%);
+        }
+
+        .profile-text {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .profile-text p {
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: var(--sub-text);
+        }
+
+        /* --- Vision Card --- */
+        .vision-box {
+            background: #111;
+            padding: 80px 40px;
+            text-align: center;
+            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-box h2 {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            letter-spacing: 0.5em;
+        }
+
+        .vision-box p {
+            font-size: 1.6rem;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        /* --- Grid & Cards --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .glass-card {
+            background: #161616;
+            padding: 40px;
+            border: 1px solid #222;
+            transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+        }
+
+        .card-label {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-logo {
+            max-height: 50px;
+            width: auto;
+            margin-bottom: 25px;
+            filter: grayscale(1) invert(1);
+            opacity: 0.7;
+        }
+
+        /* --- Music Section --- */
+        .music-content {
+            text-align: center;
+        }
+
+        .video-container {
+            margin-top: 50px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* --- Awards List --- */
+        .award-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0;
+            border-bottom: 1px solid #222;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .award-date { font-family: 'Cormorant Garamond', serif; width: 100px; color: var(--sub-text); }
+        .award-title { flex: 1; padding: 0 20px; font-weight: 300; }
+        .award-label { font-size: 0.7rem; border: 1px solid var(--accent-color); padding: 2px 10px; height: fit-content; color: var(--accent-color); }
+
+        /* --- Footer --- */
+        footer {
+            padding: 100px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .sns-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .sns-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+
+        .sns-links a:hover { color: var(--accent-color); }
+
+        .copyright { font-size: 0.7rem; color: #555; }
+
+        /* --- Animations --- */
+        @keyframes pulse {
+            0% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(10px); }
+            100% { opacity: 0.3; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 1 !important;
+            transform: translate(0, 0) !important;
+            transition: var(--transition-slow);
+        }
+
+        @media (max-width: 768px) {
+            .profile-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-name { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            nav { display: none; } /* モバイル時は簡略化、またはハンバーガーメニュー推奨 */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <h2 style="font-family: 'Cormorant Garamond'; letter-spacing: 0.5em;">M. FUSHIMI</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#ventures">Ventures</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#music">Music & Art</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">伏見 匡矩<span>MASANORI FUSHIMI</span></h1>
+        <p class="hero-tagline">Serial Entrepreneur & Artist</p>
+        <div class="scroll-down">SCROLL</div>
+    </header>
+
+    <main>
+        <section id="profile" class="section">
+            <div class="container">
+                <div class="profile-grid">
+                    <div class="profile-image-wrap js-reveal">
+                        <img src="assets/my_pic.jpg" alt="Masanori Fushimi">
+                    </div>
+                    <div class="profile-text js-reveal">
+                        <h2 class="section-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 30px;">Biography</h2>
+                        <p>1983年生まれ。早稲田大学政治経済学部卒業後、P&Gジャパンにてブランドマネジメントの真髄を叩き込まれる。その後、レキットベンキーザー社にて数々のヒット製品を世に送り出し、弱冠26歳でシニアマネージャーに就任。</p>
+                        <p>2011年からはシリアルアントレプレナーとして歩み、リクルート等からの大型資金調達、事業売却（Exit）を複数回経験。現在は株式会社エイチ代表として、AI×コンシェルジュによるBtoBプラットフォームを展開し、労働のあり方を再定義している。</p>
+                        <p>ソフトバンクアカデミアにおいては、孫正義会長を前にしたAIプレゼンで優勝。次世代を担う経営リーダーとして、常に技術と人間性の交差点に立ち続けている。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container js-reveal">
+                <div class="vision-box">
+                    <h2>VISION</h2>
+                    <p>「叡知を集め、世界を良くする」</p>
+                    <p style="font-size: 1.1rem; color: var(--sub-text); margin-top: 20px;">
+                        AIと人が共創し、すべての個人が主役となり、<br>志に火を灯せる社会の実現を目指します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventures" class="section">
+            <div class="container">
+                <h2 class="section-title js-reveal">Ventures</h2>
+                <div class="card-grid">
+                    <div class="glass-card js-reveal">
+                        <div>
+                            <span class="card-label">Current / CEO</span>
+                            <img src="assets/logos/xeichiii.png" class="card-logo" alt="Eichiii">
+                            <h3>株式会社エイチ</h3>
+                            <p style="font-size: 0.9rem; color: var(--sub-text); margin-top: 15px;">AIを活用したBtoB統合プラットフォーム。企業の非生産的な雑務を排除し、価値創造に集中できる環境を構築。</p>
+                        </div>
+                    </div>
+                    <div class="glass-card js-reveal">
+                        <div>
+                            <span class="card-label">Organization / Representative</span>
+                            <img src="assets/logos/xadpa.png" class="card-logo" alt="ADPA">
+                            <h3>AIデジタル生産性協会</h3>
+                            <p style="font-size: 0.9rem; color: var(--sub-text); margin-top: 15px;">日本企業のAI実装を牽引。200社以上のエンタープライズ企業へ研修を提供し、生産性革命を主導。</p>
+                        </div>
+                    </div>
+                    <div class="glass-card js-reveal">
+                        <div>
+                            <span class="card-label">Track Record / Exit</span>
+                            <h3>Babyrenta (cocoroiro)</h3>
+                            <p style="font-size: 0.9rem; color: var(--sub-text); margin-top: 15px;">ベビー用品レンタル業界で国内トップシェアを確立。2019年に事業売却を完了。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="section">
+            <div class="container">
+                <h2 class="section-title js-reveal">Music & Art</h2>
+                <div class="music-content js-reveal">
+                    <p style="max-width: 700px; margin: 0 auto 50px; font-weight: 300;">
+                        ビジネスが「理性」の探求であるならば、音楽は「感性」の解放。学生時代のラッパー、DJとしてのルーツを持ち、現在はデジタルとアナログが交錯する独自の音響世界を追求。アントレプレナーとしての論理的思考と、アーティストとしての直感的表現を融合させている。
+                    </p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yzjW7qVB2VI" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="section">
+            <div class="container">
+                <h2 class="section-title js-reveal">Recognition</h2>
+                <div class="award-list">
+                    <div class="award-item js-reveal">
+                        <span class="award-date">2025.02</span>
+                        <span class="award-title">ソフトバンクアカデミア 年間全体成績 2位</span>
+                        <span class="award-label">Rank</span>
+                    </div>
+                    <div class="award-item js-reveal">
+                        <span class="award-date">2024.03</span>
+                        <span class="award-title">Plug and Play Japan Summit 2024 Digital Innovation Winner</span>
+                        <span class="award-label">Winner</span>
+                    </div>
+                    <div class="award-item js-reveal">
+                        <span class="award-date">2023.12</span>
+                        <span class="award-title">孫正義会長向け AI関連プレゼン大会 優勝</span>
+                        <span class="award-label">Champion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="sns-links">
+                <a href="https://x.com/masafushimi">X / Twitter</a>
+                <a href="https://note.com/masafushimi">Note</a>
+                <a href="https://www.facebook.com/masafushimi/">Facebook</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Masanori Fushimi. Crafted with Vision.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 1000);
+        });
+
+        // Intersection Observer for Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.js-reveal, .section-title').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
