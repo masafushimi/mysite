@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35歳からの自己活用コンサルティング</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #fdf2f4;
+            --accent-pink: #d488a0;
+            --text-main: #4a4a4a;
+            --soft-green: #93c47d;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.9;
+            background: #fff;
+            background-image: radial-gradient(var(--primary-pink) 0.5px, transparent 0.5px);
+            background-size: 20px 20px; /* 控えめなドット背景 */
+        }
+
+        h1, h2, .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff, var(--primary-pink));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "🍀";
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            font-size: 3rem;
+            opacity: 0.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            color: var(--accent-pink);
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid var(--accent-pink);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-lead {
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        /* --- Sections --- */
+        .section-wrapper {
+            padding: 60px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        .card-icon {
+            color: var(--accent-pink);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--accent-pink);
+            margin-top: 0;
+            border-bottom: 1px dotted var(--accent-pink);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- List Styles --- */
+        .dot-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dot-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .dot-list li::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--accent-pink);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        /* --- Message Section --- */
+        .message-box {
+            background: var(--primary-pink);
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 100px 5px 100px 5px; /* アシンメトリーな角丸 */
+            margin: 40px 0;
+        }
+
+        .message-box p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        /* --- Profile --- */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 5px;
+            filter: sepia(20%);
+        }
+
+        .profile-text h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--accent-pink);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container { flex-direction: column; text-align: center; }
+        }
+
+        /* --- CTA --- */
+        .cta {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .btn-line {
+            display: inline-block;
+            background: #06c755;
+            color: #fff;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-line:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+        }
+
+        footer {
+            background: var(--primary-pink);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .footer-copy {
+            font-size: 1.2rem;
+            color: var(--accent-pink);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="container">
+        <span class="hero-subtitle serif">「頑張っているのに満たされない」</span>
+        <h1 class="hero-title">35歳からの<br>自己活用コンサルティング</h1>
+        <p class="hero-lead">その理由、才能の使い方が違うだけ</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section-wrapper">
+        <div class="grid">
+            <div class="card">
+                <i class="fa-regular fa-gem card-icon"></i>
+                <h3>Concept</h3>
+                <p>才能には「使い方」があります。<br>うまくいかないのは才能ではなく、<strong>配置がズレているだけ。</strong></p>
+                <p>あなたの資質を見極め、自然に成果が出る状態へ整えます。</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-regular fa-heart card-icon"></i>
+                <h3>こんな方へ</h3>
+                <ul class="dot-list">
+                    <li>頑張っているのに報われない</li>
+                    <li>自分に自信が持てない</li>
+                    <li>人間関係で消耗している</li>
+                    <li>恋愛や結婚がうまくいかない</li>
+                    <li>本当の自分が分からない</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="message-box">
+        <p class="serif" style="font-size: 1.3rem; color: var(--accent-pink);">「何をやってものダメかもしれない」</p>
+        <p>そう感じているなら、それはあなたのせいではありません。<br>
+        ただ、<strong>自分の才能を"正しく使っていないだけ"</strong>です。</p>
+        <p>資質を整えれば、仕事の成約も、理想のパートナーも無理なく手に入ってきます。</p>
+    </section>
+
+    <section class="section-wrapper">
+        <div class="grid">
+            <div class="card">
+                <i class="fa-regular fa-file-lines card-icon"></i>
+                <h3>提供しているもの</h3>
+                <p><strong>【今のあなたを活かす取扱説明書】</strong></p>
+                <p>古来の帝王学データを元にした「パーソナルシード」を活用し、あなたの特性を立体的に可視化します。</p>
+                <ul class="dot-list" style="color: var(--accent-pink); font-weight: bold;">
+                    <li>自分の強みが分かる</li>
+                    <li>人間関係がスムーズになる</li>
+                    <li>判断に迷わなくなる</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-person-running card-icon"></i>
+                <h3>Promise</h3>
+                <p>私は、あなたを変える人ではなく、<br>
+                <strong>あなたを正しく使えるようにする伴走者</strong>です。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper">
+        <h3 class="serif" style="text-align: center; font-size: 1.8rem; margin-bottom: 40px;">Profile</h3>
+        <div class="profile-container">
+            <img src="https://via.placeholder.com/280x380?text=Profile+Photo" alt="やす朋味" class="profile-img">
+            <div class="profile-text">
+                <p style="color: var(--accent-pink); font-weight: bold; margin-bottom: 5px;">個性を活かす専門家</p>
+                <h4>やす 朋味</h4>
+                <p>24歳で800万円の借金を背負い、3年で完済。その過程で周囲の否定にさらされながら「自分の存在価値」を見失う経験をする。</p>
+                <p>その後、パーソナルシードに出会い、自分の正しい使い方を理解。無理に頑張る生き方から、自然に成果が出る生き方へシフト。現在は人生を好転させるプロとして活動中。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <p class="serif" style="font-size: 1.4rem;">まずは、あなたの"設計図"を知ることから。</p>
+        <p>「自分を責める人生」から「自分を活かす人生」へ。</p>
+        <a href="#" class="btn-line">
+            <i class="fab fa-line"></i> LINE公式アカウントで相談する
+        </a>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p class="footer-copy serif">「自分らしく、愛されながら豊かに生きる女性を増やしたい」</p>
+        <p>あなたの才能は、もっと愛され、もっと輝ける。<br>
+        まずは、自分を知ることから始めましょう。</p>
+    </div>
+</footer>
+
+</body>
+</html>
