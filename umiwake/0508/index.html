@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>着床前診断事業 フィージビリティ確認TODOリスト</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; background: #ebf5fb; padding: 10px; border-left: 5px solid #3498db; margin-top: 30px; }
+        .todo-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        .contact-info { background: #fdfefe; border: 1px dashed #3498db; padding: 10px; margin-top: 5px; font-size: 0.9em; }
+        .mail-template { background: #2d3436; color: #dfe6e9; padding: 20px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; overflow-x: auto; white-space: pre-wrap; margin-top: 10px; position: relative; }
+        .mail-template::before { content: "EMAIL DRAFT"; position: absolute; top: 0; right: 10px; font-size: 0.7em; color: #636e72; }
+        .status-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; background: #e17055; color: white; margin-bottom: 10px; }
+        .copy-btn { cursor: pointer; background: #3498db; color: white; border: none; padding: 5px 10px; border-radius: 3px; font-size: 0.8em; margin-top: 5px; }
+        .copy-btn:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+
+    <h1>着床前診断事業：フィージビリティ確認 TODOリスト</h1>
+    <p>この資料は、事業構築のボトルネックを解消するための最短アクションガイドです。</p>
+
+    <section>
+        <h2>STEP 1: 海外解析ラボ（供給元の確保）</h2>
+        <div class="todo-card">
+            <span class="status-badge">最優先</span>
+            <p><strong>目的：</strong> 日本からの検体受入可否と「仕入れ原価（解析料）」を確定させる。</p>
+            <table>
+                <tr>
+                    <th>コンタクト先</th>
+                    <th>URL / 連絡先</th>
+                    <th>確認事項</th>
+                </tr>
+                <tr>
+                    <td><strong>Igenomix (Global/USA)</strong></td>
+                    <td><a href="https://www.igenomix.com/" target="_blank">igenomix.com</a><br>info.usa@igenomix.com</td>
+                    <td rowspan="2">・日本からの受入可否<br>・PGT-A/Mの単価（USD）<br>・性別判定報告の可否<br>・結果判明までの日数（TAT）</td>
+                </tr>
+                <tr>
+                    <td><strong>Igenomix Taiwan</strong></td>
+                    <td><a href="https://www.igenomix.com.tw/" target="_blank">igenomix.com.tw</a><br>info.taiwan@igenomix.com</td>
+                </tr>
+            </table>
+
+            <div class="mail-template" id="mail1">
+Subject: Inquiry regarding PGT-A/M services and sample shipment from Japan
+
+Dear International Business Development Team,
+
+I am writing to you as I am currently preparing to launch a new agency in Japan focused on reproductive medicine logistics and brokerage services. 
+
+We are specifically looking for a reliable laboratory partner that can provide high-quality genetic testing (PGT-A, PGT-M, and Sex Selection) for our Japanese clients. Before we proceed, I would like to clarify:
+
+1. Sample Acceptance: Do you accept frozen embryos or biopsied cells (TE biopsy) shipped from Japan?
+2. Pricing: Could you provide a price list for PGT-A and PGT-M? 
+3. Sex Selection: Is it possible to include gender results in the PGT-A report?
+4. Turnaround Time (TAT): How many days from sample arrival to report issuance?
+
+I look forward to your response.
+
+Best regards,
+[Your Name]</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>STEP 2: ロジスティクス（物流ルートの構築）</h2>
+        <div class="todo-card">
+            <p><strong>目的：</strong> 「死なさずに運ぶ」ための実費と運用ルールを確定させる。</p>
+            <table>
+                <tr>
+                    <th>コンタクト先</th>
+                    <th>URL / 連絡先</th>
+                    <th>確認事項</th>
+                </tr>
+                <tr>
+                    <td><strong>Cryosend (クライオセンド)</strong></td>
+                    <td>03-6869-7484<br><a href="https://cryosend.com/ja/" target="_blank">cryosend.com</a></td>
+                    <td rowspan="2">・ドライシッパーのレンタル/販売代<br>・日本から米/台への往復送料<br>・空港でのX線回避対応の可否<br>・温度ロガーの提供有無</td>
+                </tr>
+                <tr>
+                    <td><strong>World Courier</strong></td>
+                    <td>03-5714-5300<br><a href="https://www.worldcourier.com/jp" target="_blank">worldcourier.com</a></td>
+                </tr>
+            </table>
+
+            <div class="mail-template" id="mail2">
+件名：凍結胚の海外輸送に関する見積・仕様確認の件
+
+Cryosend 担当者様
+
+現在、生殖細胞の国際輸送サービスを計画しております、[あなたの氏名]と申します。
+貴社のサービスについて、以下数点ご教示いただけますでしょうか。
+
+1. ドライシッパーのレンタル費用、および日本〜米国/台湾への概算往復送料。
+2. 空港での「X線回避（手物検査）」の対応実績と確約の可否。
+3. 輸送中の温度ログデータの提供可否。
+4. 集荷からラボ納品までの通常リードタイム。
+
+まずは概算資料をいただけますと幸いです。よろしくお願いいたします。</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>STEP 3: 法務・ライセンス（事業基盤の整備）</h2>
+        <div class="todo-card">
+            <p><strong>目的：</strong> 「旅行業登録」と「身元保証機関」の要件をクリアし法的リスクを消す。</p>
+            <table>
+                <tr>
+                    <th>コンタクト先</th>
+                    <th>URL / 連絡先</th>
+                    <th>確認事項</th>
+                </tr>
+                <tr>
+                    <td><strong>ソリューション行政書士法人</strong></td>
+                    <td>03-5312-5880<br><a href="https://www.bridge2n.jp/" target="_blank">bridge2n.jp</a></td>
+                    <td>・第3種旅行業の取得要件<br>・医療滞在ビザ身元保証機関の登録基準<br>・新設法人の資本金と純資産500万要件</td>
+                </tr>
+            </table>
+
+            <div class="mail-template" id="mail3">
+件名：第3種旅行業および医療滞在ビザ身元保証機関の登録に関する相談
+
+ソリューション行政書士法人 担当者様
+
+現在、不妊治療患者の海外検査仲介および渡航支援事業を計画しております。
+必要な許認可についてアドバイスをいただきたくご連絡いたしました。
+
+1. 本事業における「第3種旅行業」取得の必須性と留意点。
+2. 医療滞在ビザ「身元保証機関」の登録要件とスケジュール。
+3. 新設法人での「純資産500万円以上」要件のクリア方法。
+
+初回面談（オンライン可）の調整と、お見積りをいただけますと幸いです。</div>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p style="text-align: center; color: #95a5a6;">&copy; 2026 Business Feasibility Checklist - Prepared for Next Generation ART Services</p>
+    </footer>
+
+</body>
+</html>
