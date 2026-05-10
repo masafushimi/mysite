@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>energy salon - 筋骨リンパ痩身 全身オールハンドデトックスコース</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;400;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --p-pink: #f1a7d1;
+  --p-purple: #9d76b8;
+  --p-purple-deep: #7a427a;
+  --p-gold: #d4af37;
+  --p-gold-light: #f4eee1;
+  --bg-marble: #faf8f5;
+  --text-main: #2d1f2d;
+  --gradient-logo: linear-gradient(135deg, #f1a7d1, #9d76b8);
+  --gradient-gold: linear-gradient(135deg, #d4af37, #f4eee1, #d4af37);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Serif JP', serif;
+  background-color: var(--bg-marble);
+  color: var(--text-main);
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* --- 背景装飾 (クリスタル・大理石・光の粒子) --- */
+.complex-bg {
+  background-image: 
+    radial-gradient(circle at 0% 10%, rgba(241, 167, 209, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 100% 40%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(157, 118, 184, 0.1) 0%, transparent 50%),
+    url('https://www.transparenttextures.com/patterns/parian-marble.png');
+}
+
+/* --- ロゴ再現 (SVG) --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+.logo-text-img {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.05em;
+}
+
+/* --- Header --- */
+header {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--p-gold-light);
+}
+
+/* --- Hero (強化版ファーストビュー) --- */
+.hero {
+  padding: 40px 0 100px;
+  text-align: center;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* キラキラした光の粒子の演出 */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle at 40% 70%, rgba(241,167,209,0.4) 2px, transparent 2px),
+        radial-gradient(circle at 70% 80%, rgba(212,175,55,0.4) 2px, transparent 2px);
+    background-size: 100px 100px;
+    opacity: 0.5;
+    animation: floating-dust 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floating-dust {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+}
+
+.hero-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-location {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--p-gold);
+    border: 1px solid var(--p-gold);
+    padding: 2px 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-label { 
+    font-size: 0.8rem; 
+    letter-spacing: 0.5em; 
+    color: var(--p-purple); 
+    display: block; 
+    margin-bottom: 15px; 
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.hero-title { 
+    font-size: 2.8rem; 
+    line-height: 1.1; 
+    font-weight: 200; 
+    margin-bottom: 50px; 
+}
+.hero-title .sub {
+    font-size: 1.1rem;
+    display: block;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+.hero-title em { 
+    font-style: normal; 
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700; 
+    display: block; 
+    font-size: 1.8rem; 
+    margin-top: 15px;
+    letter-spacing: 0.05em;
+}
+
+.main-visual-rich {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+/* アーチデザインの装飾を強化 */
+.visual-arch-wrap {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.visual-arch-wrap::before {
+    content: '';
+    position: absolute;
+    top: -15px; left: -15px; right: -15px; bottom: -15px;
+    border: 1px solid var(--p-gold-light);
+    border-radius: 300px 300px 0 0;
+    z-index: -1;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 300px 300px 0 0;
+    border: 10px solid white;
+    box-shadow: 0 40px 80px rgba(157, 118, 184, 0.2);
+}
+
+/* クリスタルのような輝きのエフェクト */
+.shimmer-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shimmer-anim 4s infinite;
+    border-radius: 300px 300px 0 0;
+    pointer-events: none;
+}
+
+@keyframes shimmer-anim {
+    0% { background-position: 200% 200%; }
+    100% { background-position: -200% -200%; }
+}
+
+.badge-floating-rich {
+    position: absolute;
+    bottom: 40px; right: -15px;
+    background: white;
+    border: 2px solid var(--p-gold);
+    color: var(--p-purple-deep);
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    z-index: 10;
+    font-weight: bold;
+}
+.badge-floating-rich .highlight {
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--p-pink);
+    display: block;
+}
+
+/* --- Price Box (リッチ版) --- */
+.price-box-rich {
+    background: white;
+    margin: 0 20px 80px;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+}
+.price-box-rich::before {
+    content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 1px solid var(--p-gold-light); pointer-events: none;
+}
+/* コーナーの装飾 */
+.corner { position: absolute; width: 20px; height: 20px; border-color: var(--p-gold); border-style: solid; }
+.t-l { top: 0; left: 0; border-width: 1px 0 0 1px; }
+.t-r { top: 0; right: 0; border-width: 1px 1px 0 0; }
+.b-l { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+.b-r { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+.price-current-rich { 
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-flex; 
+    align-items: baseline; 
+    justify-content: center; 
+    margin: 15px 0; 
+}
+.price-current-rich .num { font-size: 6.5rem; font-family: 'Cormorant Garamond', serif; line-height: 0.8; font-weight: 300; }
+
+.btn-reserve-rich {
+  background: linear-gradient(135deg, #27ae60, #1d9551);
+  color: white;
+  padding: 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+  box-shadow: 0 20px 40px rgba(39, 174, 96, 0.3);
+  max-width: 380px;
+  margin: 40px auto 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.1em;
+}
+.btn-reserve-rich:hover { transform: translateY(-5px); box-shadow: 0 25px 50px rgba(39, 174, 96, 0.4); }
+
+/* --- 共通セクションスタイル --- */
+.section-head { text-align: center; margin-bottom: 70px; }
+.section-head .en { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--p-gold); letter-spacing: 0.4em; display: block; margin-bottom: 12px; }
+.section-head h2 { font-size: 2rem; font-weight: 400; letter-spacing: 0.15em; }
+
+/* --- Problems Section --- */
+.problems { padding: 120px 20px; background: #fffcf9; }
+.prob-list { max-width: 580px; margin: 0 auto; display: grid; gap: 20px; }
+.prob-card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+    border-left: 6px solid var(--p-pink); 
+}
+.prob-card span { font-size: 0.9rem; color: var(--p-purple); font-family: 'Cormorant Garamond', serif; font-weight: bold; }
+
+/* --- Method Detail --- */
+.method-detail { padding: 120px 20px; background: white; }
+.method-grid { display: grid; gap: 100px; max-width: 850px; margin: 60px auto 0; }
+.m-item { text-align: center; }
+.m-img-wrap { width: 100%; aspect-ratio: 16/9; background: #f8f8f8; margin-bottom: 35px; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+.m-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.m-content h3 { font-size: 1.5rem; color: var(--p-purple-deep); margin-bottom: 20px; letter-spacing: 0.15em; }
+.m-content p { font-size: 0.95rem; color: #555; text-align: justify; }
+
+/* --- Voice Section --- */
+.voice { padding: 140px 20px; background: #fbf8f5; }
+.voice-card { 
+    background: white; 
+    padding: 50px 35px; 
+    margin-bottom: 50px; 
+    border: 1px solid var(--p-gold-light); 
+    position: relative; 
+    max-width: 700px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.voice-card::after { 
+    content: '”'; 
+    position: absolute; 
+    top: 15px; left: 25px; 
+    font-size: 6rem; 
+    color: rgba(241, 167, 209, 0.2); 
+    font-family: 'Cormorant Garamond', serif; 
+    line-height: 1; 
+}
+.voice-header { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; border-bottom: 1px solid #f5f5f5; padding-bottom: 25px; }
+.v-icon { width: 70px; height: 70px; border-radius: 50%; background: var(--p-gold-light); flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+.v-info h4 { font-size: 1.2rem; color: var(--p-purple-deep); margin-bottom: 8px; }
+.v-info .tag { background: var(--gradient-logo); color: white; font-size: 0.75rem; padding: 3px 14px; border-radius: 20px; font-weight: bold; }
+.v-body { font-size: 0.95rem; color: #555; line-height: 2.2; }
+
+/* --- Steps Section --- */
+.steps { padding: 140px 20px; background: white; }
+.step-container { max-width: 650px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px; }
+.s-item { display: flex; gap: 40px; align-items: flex-start; }
+.s-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; color: var(--p-gold-light); font-style: italic; line-height: 0.7; flex-shrink: 0; }
+.s-text h4 { font-size: 1.2rem; color: var(--p-purple-deep); margin-bottom: 12px; }
+.s-text p { font-size: 0.9rem; color: #666; }
+
+/* --- Campaign --- */
+.campaign {
+  background: #1e111e;
+  color: white;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+}
+.campaign-inner { border: 1px solid rgba(212, 175, 55, 0.3); padding: 80px 30px; max-width: 550px; margin: 0 auto; position: relative; z-index: 1; }
+.campaign-inner::before { content: 'SPECIAL CAMPAIGN'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #1e111e; padding: 0 20px; font-size: 0.75rem; letter-spacing: 0.5em; color: var(--p-gold); }
+.camp-price .num { font-size: 5.5rem; font-family: 'Cormorant Garamond', serif; background: var(--gradient-logo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+
+/* --- Footer & Floating --- */
+.floating-footer {
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  background: rgba(255,255,255,0.98); padding: 15px 20px 40px;
+  border-top: 1px solid var(--p-gold-light); z-index: 1000; text-align: center;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+footer { background: #111; color: #555; padding: 80px 20px 160px; text-align: center; font-size: 0.75rem; }
+
+/* ロゴSVGパーツ */
+.crystal-shape { fill: url(#crystal-grad); }
+</style>
+</head>
+<body class="complex-bg">
+
+<header>
+  <a href="#" class="logo-container">
+    <div class="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="crystal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f1a7d1" />
+                    <stop offset="100%" stop-color="#9d76b8" />
+                </linearGradient>
+                <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#d4af37" />
+                    <stop offset="100%" stop-color="#f4eee1" />
+                </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" />
+            <path d="M50 20 L65 45 L50 65 L35 45 Z" fill="url(#crystal-grad)" opacity="0.9" />
+            <path d="M35 35 L50 60 L30 75 L20 50 Z" fill="url(#crystal-grad)" opacity="0.7" />
+            <path d="M65 35 L80 50 L70 75 L50 60 Z" fill="url(#crystal-grad)" opacity="0.7" />
+            <circle cx="25" cy="25" r="1.5" fill="#fff" />
+            <circle cx="75" cy="20" r="1" fill="#fff" />
+        </svg>
+    </div>
+    <span class="logo-text-img">energy</span>
+  </a>
+  <div style="font-size: 0.8rem; color: var(--p-gold); font-weight: bold; letter-spacing: 0.2em;">MENU</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-location">Omotesando / Ginza</div>
+    <span class="hero-label">✦ &nbsp; PREMIUM BEAUTY & DETOX SALON &nbsp; ✦</span>
+    <h1 class="hero-title">
+        <span class="sub">本当の美しさは、内側から目覚める。</span>
+        見た目年齢 <span style="font-family: 'Cormorant Garamond', serif; font-style: italic;">−10</span> 歳。
+        <em>筋骨リンパ痩身 MSコース 60分</em>
+    </h1>
+    
+    <div class="main-visual-rich">
+        <div class="visual-arch-wrap">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Premium Esthetic Session" class="main-img">
+            <div class="shimmer-layer"></div>
+        </div>
+        <div class="badge-floating-rich">
+            <span style="font-size: 0.65rem;">今なら限定</span>
+            <span class="highlight">70%</span>
+            <span style="font-size: 0.65rem;">OFF!!</span>
+        </div>
+    </div>
+
+    <div class="price-box-rich">
+        <div class="corner t-l"></div><div class="corner t-r"></div>
+        <div class="corner b-l"></div><div class="corner b-r"></div>
+        <p style="font-size: 0.95rem; color: var(--p-gold); font-weight: bold; margin-bottom: 15px;">初回限定 特別体験キャンペーン実施中</p>
+        <p style="text-decoration: line-through; color: #ccc; font-size: 1.2rem; letter-spacing: 0.1em;">通常価格 ¥19,800</p>
+        <div class="price-current-rich">
+            <span style="font-size: 2.5rem; margin-right: 12px; font-weight: 300;">¥</span>
+            <span class="num">5,980</span>
+            <span style="font-size: 1.2rem; margin-left: 15px; color: var(--text-main); font-weight: 400;">円(税込)</span>
+        </div>
+        <p style="font-size: 0.85rem; color: #999; letter-spacing: 0.05em;">[ 全身オールハンド 60分 ＋ カウンセリング 10分 ]</p>
+        <a href="#reserve" class="btn-reserve-rich">この内容で今すぐ予約する ›</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="section-head">
+    <span class="en">CONCERNS</span>
+    <h2>こんなお悩み、ありませんか？</h2>
+  </div>
+  <div class="prob-list">
+    <div class="prob-card"><span>01</span> <p>食事制限やハードな運動をしても痩せにくくなった</p></div>
+    <div class="prob-card"><span>02</span> <p>常に身体が重だるく、寝ても疲れが取れにくい</p></div>
+    <div class="prob-card"><span>03</span> <p>脚や顔のむくみがひどく、ボディラインが崩れてきた</p></div>
+    <div class="prob-card"><span>04</span> <p>慢性的な肩こりや腰痛があり、マッサージが手放せない</p></div>
+  </div>
+  <div style="text-align: center; margin-top: 60px; padding: 0 20px;">
+    <p style="font-size: 1.2rem; color: var(--p-purple-deep); font-weight: bold; line-height: 1.7;">
+        それらの原因は、深層筋肉に蓄積した<br>
+        「老廃物とリンパの詰まり」にあります。
+    </p>
+  </div>
+</section>
+
+<!-- METHOD DETAIL -->
+<section class="method-detail" id="about">
+  <div class="section-head">
+    <span class="en">OUR METHOD</span>
+    <h2>energy 3つのこだわり</h2>
+  </div>
+  <div class="method-grid">
+    <div class="m-item">
+        <div class="m-img-wrap"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80"></div>
+        <div class="m-content">
+            <h3>筋骨への深層アプローチ</h3>
+            <p>表面的な癒やしではなく、骨のキワに溜まった老廃物を削ぎ落とすように流し、深層筋肉を揉み解します。癒着した筋膜を剥がすことで、本来の骨格美を引き出し、速攻でボディラインを変えていきます。</p>
+        </div>
+    </div>
+    <div class="m-item">
+        <div class="m-img-wrap"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"></div>
+        <div class="m-content">
+            <h3>全身オールハンドの極み</h3>
+            <p>機械では決して届かない微細な詰まりや、その日の体調による微妙な変化をセラピストの手が瞬時に察知。お客様お一人おひとりの状態に合わせた最適な圧で、1ミリの漏れもなくデトックスを完遂します。</p>
+        </div>
+    </div>
+    <div class="m-item">
+        <div class="m-img-wrap"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=600&q=80"></div>
+        <div class="m-content">
+            <h3>圧倒的な排出（デトックス）量</h3>
+            <p>滞っていたリンパが劇的に流れ出すことで、内側から浄化される感覚を実感。多くのお客様が、施術翌朝の「驚くほど大量な老廃物の排出」とその後の身体の軽さに驚愕されます。</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice">
+  <div class="section-head">
+    <span class="en">CUSTOMER VOICE</span>
+    <h2>お客様からの喜びの声</h2>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="v-icon">🌸</div>
+      <div class="v-info">
+        <h4>費用対効果は良いと思います</h4>
+        <span class="tag">40代・女性</span>
+      </div>
+    </div>
+    <div class="v-body">
+      施術時間はそれほど長いわけではないのに、体が楽になりました。体の部分によっては痛いと思うところもありましたが、当日だけではなく体が軽い感じが続いているのは、今まで味わったことがない感覚です。効果が持続するので、それほど頻繁に通わなくても良い状態が保てるのも魅力です。お安くはないですが、費用対効果は良いと思います。
+    </div>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="v-icon">💜</div>
+      <div class="v-info">
+        <h4>体の変化が凄まじかった</h4>
+        <span class="tag">40代・女性</span>
+      </div>
+    </div>
+    <div class="v-body">
+      施術後数時間経過してからの体の変化が凄まじかった。酷い肩こりがすべて解消され、翌日には今までにないような大量の老廃物が排出されました。見た目の体は以前はなんとなくボコっとしていたのに、スッキリしたラインに変わって、脂肪がどこに消えたのか不思議な感覚。人からも変わった！と驚かれました。
+    </div>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="v-icon">✨</div>
+      <div class="v-info">
+        <h4>感謝する程の効果が実感できる</h4>
+        <span class="tag">50代・女性</span>
+      </div>
+    </div>
+    <div class="v-body">
+      以前はエステと整体を掛け持ちしていましたが、こちらで施術を受けるようになり、ここだけで事が済むようになりました。脚のむくみが解消され、キツくて履けなかった靴まで入るようになりました！ひどい体の凝りも無くなり、尚且つ体のラインが綺麗になるなんて本当に嬉しい限りです。毎回感謝する程の効果です。
+    </div>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="v-icon">💎</div>
+      <div class="v-info">
+        <h4>長年の悩みが解消されました</h4>
+        <span class="tag">50代・女性</span>
+      </div>
+    </div>
+    <div class="v-body">
+      長年悩んでいた肩こりが劇的に改善されました。施術を受けた直後から体が驚くほど軽くなり、その効果が長く持続します。また、顔のラインも驚くほどスッキリ変わりました。スタッフの方のいつも変わらない一生懸命な施術に、今では「なくてはならない」存在と感じています。大好きなお店になりました。
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+  <div class="section-head">
+    <span class="en">PROCESS</span>
+    <h2>施術の流れ</h2>
+  </div>
+  <div class="step-container">
+    <div class="s-item">
+        <div class="s-num">01</div>
+        <div class="s-text">
+            <h4>深層カウンセリング・精密採寸</h4>
+            <p>現在のお悩みや生活習慣を伺い、お身体の状態をプロの視点で精密にチェック。理想の姿への最短ルートを導き出し、施術プランを組み立てます。</p>
+        </div>
+    </div>
+    <div class="s-item">
+        <div class="s-num">02</div>
+        <div class="s-text">
+            <h4>全身デトックス解放</h4>
+            <p>足の指先から頭頂部まで、全身をオールハンドで丹念に揉み解し、深層に溜まった詰まりを丁寧に解放。老廃物の通り道を一気に広げます。</p>
+        </div>
+    </div>
+    <div class="s-item">
+        <div class="s-num">03</div>
+        <div class="s-text">
+            <h4>独自技術：筋骨リンパ調整</h4>
+            <p>骨のキワを攻める独自の技術で、長年滞っていた深部の汚れを一掃。ボディラインの劇的な変化とその場で分かる「軽さ」を体感いただきます。</p>
+        </div>
+    </div>
+    <div class="s-item">
+        <div class="s-num">04</div>
+        <div class="s-text">
+            <h4>アフターアドバイス</h4>
+            <p>施術後の変化を鏡と採寸で一緒に確認。お食事のアドバイスや簡単なストレッチなど、美しい状態を一生維持するためのホームケアを伝授します。</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPAIGN -->
+<section class="campaign">
+  <div class="campaign-inner">
+    <p style="color: var(--p-gold); letter-spacing: 0.4em; font-size: 0.8rem; margin-bottom: 25px;">SPECIAL LIMITED OFFER</p>
+    <h2 style="font-weight: 300; font-size: 1.6rem; line-height: 1.7;">
+        貴方のお身体に合わせて<br>
+        オーダーメイドで組み立てる<br>
+        <strong style="background: var(--gradient-logo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2rem; display: block; margin-top: 15px;">特別キャンペーン実施中！</strong>
+    </h2>
+    <p style="margin: 35px 0; color: var(--p-gold-light); letter-spacing: 0.15em;">カスタムオーダーメイド 90分コース</p>
+    <div class="camp-price">
+        <p style="font-size: 0.85rem; opacity: 0.6; text-decoration: line-through;">最大 ¥36,300 相当</p>
+        <div style="display: flex; align-items: baseline; justify-content: center; margin-top: 15px;">
+            <span style="font-size: 2.2rem; color: var(--p-pink); margin-right: 8px;">¥</span>
+            <span class="num">9,800</span>
+            <span style="font-size: 1.1rem; margin-left: 12px; color: #fff;">(税込)</span>
+        </div>
+    </div>
+    <p style="font-size: 0.8rem; color: #999; margin-top: 25px;">[ 筋骨リンパ痩身 ＋ フェイシャル ＋ ZEN調整 ]</p>
+    <a href="#reserve" class="btn-reserve-rich" style="background: var(--gradient-logo); border: none;">特別コースで予約する ›</a>
+  </div>
+</section>
+
+<!-- SALON INFO -->
+<section style="padding: 120px 20px; background: white;" id="salon">
+  <div class="section-head">
+    <span class="en">SALON LIST</span>
+    <h2>店舗情報</h2>
+  </div>
+  <div style="max-width: 540px; margin: 0 auto; display: grid; gap: 50px;">
+    <div style="border: 1px solid var(--p-gold-light); padding: 50px 30px; position: relative;">
+        <span style="position: absolute; top: -12px; left: 30px; background: white; padding: 0 15px; font-size: 0.8rem; font-weight: bold; color: var(--p-purple-deep);">表参道 ANNEX店</span>
+        <p style="font-size: 0.9rem; line-height: 1.8;">〒150-0001<br>東京都渋谷区神宮前4-7-12 エーデル青山1A</p>
+        <p style="font-size: 0.85rem; color: #666; border-top: 1px solid #f8f8f8; padding-top: 20px; margin-top: 20px;">
+            営業時間：平日 12:00〜21:00 / 土日祝 10:30〜19:00<br>
+            定休日：月曜日
+        </p>
+        <a href="#" style="display: block; text-align: center; border: 1px solid var(--p-gold); color: var(--p-gold); padding: 14px; margin-top: 30px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">Google Mapを表示</a>
+    </div>
+    <div style="border: 1px solid var(--p-gold-light); padding: 50px 30px; position: relative;">
+        <span style="position: absolute; top: -12px; left: 30px; background: white; padding: 0 15px; font-size: 0.8rem; font-weight: bold; color: var(--p-purple-deep);">銀座 ANNEX店</span>
+        <p style="font-size: 0.9rem; line-height: 1.8;">〒104-0061<br>東京都中央区銀座2-12-4 アジリア 5's 301</p>
+        <p style="font-size: 0.85rem; color: #666; border-top: 1px solid #f8f8f8; padding-top: 20px; margin-top: 20px;">
+            営業時間：平日 12:00〜21:00 / 土日祝 10:30〜19:00<br>
+            定休日：月曜日
+        </p>
+        <a href="#" style="display: block; text-align: center; border: 1px solid var(--p-gold); color: var(--p-gold); padding: 14px; margin-top: 30px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">Google Mapを表示</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <a href="#" class="logo-container" style="justify-content: center; margin-bottom: 30px;">
+        <div class="logo-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" />
+                <path d="M50 20 L65 45 L50 65 L35 45 Z" fill="url(#crystal-grad)" opacity="0.9" />
+                <path d="M35 35 L50 60 L30 75 L20 50 Z" fill="url(#crystal-grad)" opacity="0.7" />
+                <path d="M65 35 L80 50 L70 75 L50 60 Z" fill="url(#crystal-grad)" opacity="0.7" />
+            </svg>
+        </div>
+        <span class="logo-text-img">energy</span>
+    </a>
+  <p style="letter-spacing: 0.25em; font-size: 0.7rem; opacity: 0.6;">COPYRIGHT © ENERGY SALON ALL RIGHTS RESERVED.</p>
+</footer>
+
+<!-- FLOATING -->
+<div class="floating-footer">
+  <a href="#reserve" class="btn-reserve-rich">【初回限定体験】¥5,980 で今すぐ予約する ›</a>
+</div>
+
+</body>
+</html>
