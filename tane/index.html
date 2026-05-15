@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tane株式会社 | 海外着床前診断（PGT）トータルサポート</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #10b981;
+            margin-top: 8px;
+        }
+        .step-number {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xl">t</div>
+                    <span class="text-2xl font-bold tracking-tighter text-emerald-600">tane <span class="text-slate-700 font-medium text-lg">株式会社</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-emerald-600 transition">PGTについて</a>
+                    <a href="#gender" class="hover:text-emerald-600 transition">産み分け</a>
+                    <a href="#service" class="hover:text-emerald-600 transition">サービス</a>
+                    <a href="#price" class="hover:text-emerald-600 transition">費用</a>
+                    <a href="#flow" class="hover:text-emerald-600 transition">流れ</a>
+                    <a href="#contact" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    安心と確かな未来を、<br><span class="text-emerald-600">一粒の種（tane）から。</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    晩婚化・高齢出産が進む今、母体への負担を減らし、より確実な妊娠を目指すために。海外での高度な着床前診断（PGT）を、日本にいながら「One on One」で親身にサポートいたします。
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-emerald-200 hover:scale-105 transition-transform text-center">無料相談はこちら</a>
+                    <a href="#service" class="bg-white text-emerald-600 border border-emerald-100 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition text-center">サービス詳細</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-emerald-200/50 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1579154235828-401982250e29?auto=format&fit=crop&q=80&w=800" alt="医療イメージ" class="relative z-10 rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PGT Introduction -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">着床前診断（PGT）について</h2>
+                <p class="text-slate-500">胚移植前に染色体・遺伝子を解析し、流産回避と健康な出産を支援します</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded text-sm font-bold">PGT-A</span>
+                        <h3 class="text-xl font-bold">着床前染色体異数性診断</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        性染色体を含むすべての染色体の数を調べます。着床率を高め、流産を低減することを目的としています。
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 全ての染色体数をチェック</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 35歳以上の方や流産経験のある方へ</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded text-sm font-bold">PGT-M</span>
+                        <h3 class="text-xl font-bold">着床前単一遺伝子診断</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        特定の遺伝子や染色体の異常を検査します。ご夫婦のいずれかが遺伝性疾患の保因者である場合等に有効です。
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 特定遺伝子の詳細解析</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 遺伝性疾患の予防・対策</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gender Selection Section -->
+    <section id="gender" class="py-24 bg-emerald-600 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">男女の産み分けについて</h2>
+                    <p class="text-lg text-emerald-50 mb-8 leading-relaxed">
+                        日本国内では規制されていますが、tane株式会社が提携するアメリカ・ウクライナの医療機関では法的な制限がありません。
+                        <br><br>
+                        着床前診断の過程ですべての染色体（XX/XY）を調べるため、受精卵の性別を事前に判定し、ご希望の性の受精卵を移植することで産み分けが可能になります。
+                    </p>
+                    <div class="bg-white/10 p-6 rounded-2xl border border-white/20">
+                        <p class="text-sm italic">「ファミリープランや幸せな家族形成をサポートするという目的で、海外では一般的に行われています。」</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-8 rounded-3xl text-center shadow-xl">
+                            <span class="text-emerald-600 text-4xl block mb-2 font-bold">XX</span>
+                            <span class="text-slate-400 font-bold">Female</span>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl text-center shadow-xl mt-8">
+                            <span class="text-emerald-600 text-4xl block mb-2 font-bold">XY</span>
+                            <span class="text-slate-400 font-bold">Male</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Support -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">世界トップレベルの提携機関</h2>
+                <p class="text-slate-500 font-medium">最新のNGS法を導入した信頼の実績</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6 items-start">
+                    <div class="w-16 h-16 bg-slate-100 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">アメリカ提携機関</h4>
+                        <p class="text-sm text-slate-500 mb-4">Fertility Institute of Hawaii / INVITAE</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">年間2万件を超える実績。Dr. John Frattarelliをはじめとする生殖医療の世界的権威が統括しています。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6 items-start">
+                    <div class="w-16 h-16 bg-slate-100 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">ウクライナ提携機関</h4>
+                        <p class="text-sm text-slate-500 mb-4">Clinic "NADIYA" 研究所</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">不妊治療先進国。Dr. Dmytro Mykytenko責任者のもと、世界初となる最新技術を次々と導入しています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="price" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">PGT-A総合プラン費用</h2>
+                <p class="text-slate-500">往復輸送・検査費用・サポート一式が含まれています</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <!-- USA Plan -->
+                <div class="w-full md:w-96 border-2 border-emerald-500 rounded-3xl p-8 relative overflow-hidden bg-emerald-50/20">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-white px-4 py-1 rounded-bl-xl text-xs font-bold uppercase tracking-widest">Premium</div>
+                    <h3 class="text-2xl font-bold mb-6">アメリカ</h3>
+                    <div class="space-y-6 mb-8 border-b border-emerald-100 pb-8">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">受精卵 1〜4個</p>
+                            <p class="text-4xl font-bold">125<span class="text-lg font-normal">万円</span></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">受精卵 5〜8個</p>
+                            <p class="text-4xl font-bold">195<span class="text-lg font-normal">万円</span></p>
+                        </div>
+                    </div>
+                    <ul class="text-sm space-y-4 text-slate-600 mb-8">
+                        <li class="flex items-center gap-2">✓ NGS法による高精度検査</li>
+                        <li class="flex items-center gap-2">✓ 専任バイリンガル担当</li>
+                        <li class="flex items-center gap-2">✓ 国際往復輸送・保険完備</li>
+                    </ul>
+                </div>
+
+                <!-- Ukraine Plan -->
+                <div class="w-full md:w-96 border-2 border-slate-100 rounded-3xl p-8 bg-white shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">ウクライナ</h3>
+                    <div class="space-y-6 mb-8 border-b border-slate-100 pb-8">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">受精卵 1〜4個</p>
+                            <p class="text-4xl font-bold text-slate-700">95<span class="text-lg font-normal text-slate-400">万円</span></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">受精卵 5〜8個</p>
+                            <p class="text-4xl font-bold text-slate-700">170<span class="text-lg font-normal text-slate-400">万円</span></p>
+                        </div>
+                    </div>
+                    <ul class="text-sm space-y-4 text-slate-500 mb-8">
+                        <li class="flex items-center gap-2">✓ 世界最新技術の培養施設</li>
+                        <li class="flex items-center gap-2">✓ コストパフォーマンス重視</li>
+                        <li class="flex items-center gap-2">✓ 渡航不要のトータル代行</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 max-w-2xl mx-auto p-6 bg-slate-50 rounded-xl text-xs text-slate-500 leading-relaxed">
+                ※税込金額です。国内クリニックの治療費は含まれません。受精卵8個を超える場合は1個につき6万円の追加となります。バイオプシー不可の場合の返金制度（8個以上時）もございます。
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics -->
+    <section id="service" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800" alt="ドライシッパー" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">国際バイオ輸送のプロフェッショナル</h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        tane株式会社は、バイオ・メディカル品の輸送に特化した国際輸送業者としての顔も持ちます。
+                        IATA認定のドライシッパー（液体窒素吸着型容器）を使用し、-190℃を15日以上維持。2013年以来、事故や温度上昇による不具合は1度もございません。
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-emerald-500 pl-4">
+                            <p class="text-2xl font-bold">100%</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest">無事故実績</p>
+                        </div>
+                        <div class="border-l-2 border-emerald-500 pl-4">
+                            <p class="text-2xl font-bold">24h</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest">トラッキング</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow -->
+    <section id="flow" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">検査までの流れ</h2>
+                <p class="text-slate-500">お問い合わせから移植までの8ステップ</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-6 p-6 border border-slate-100 rounded-2xl hover:bg-emerald-50/30 transition cursor-default group">
+                    <span class="step-number text-3xl text-emerald-100 group-hover:text-emerald-500 transition">01</span>
+                    <div>
+                        <h4 class="font-bold">お問い合わせ・ご相談</h4>
+                        <p class="text-sm text-slate-500">電話、面談、またはヒアリングシートの記入から始まります。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 p-6 border border-slate-100 rounded-2xl">
+                    <span class="step-number text-3xl text-slate-100">02</span>
+                    <div>
+                        <h4 class="font-bold">国内クリニックにて採卵・受精</h4>
+                        <p class="text-sm text-slate-500">提携先またはお近くのクリニックで体外受精を開始します。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 p-6 border border-slate-100 rounded-2xl">
+                    <span class="step-number text-3xl text-slate-100">03</span>
+                    <div>
+                        <h4 class="font-bold">契約締結・お支払い</h4>
+                        <p class="text-sm text-slate-500">検査個数確定後、お見積り。カードまたは銀行振込に対応。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 p-6 border border-emerald-500 bg-emerald-50/50 rounded-2xl">
+                    <span class="step-number text-3xl text-emerald-500">04-06</span>
+                    <div>
+                        <h4 class="font-bold">国際輸送・海外検査</h4>
+                        <p class="text-sm text-slate-500 text-emerald-700">弊社が受精卵をピックアップ。海外での検査は約3〜7週間で完了します。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 p-6 border border-slate-100 rounded-2xl">
+                    <span class="step-number text-3xl text-slate-100">07</span>
+                    <div>
+                        <h4 class="font-bold">受精卵の返送</h4>
+                        <p class="text-sm text-slate-500 text-slate-500">検査済み受精卵を日本のご指定クリニックへ安全にお届けします。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 p-6 border border-slate-100 rounded-2xl">
+                    <span class="step-number text-3xl text-slate-100">08</span>
+                    <div>
+                        <h4 class="font-bold">移植開始</h4>
+                        <p class="text-sm text-slate-500">ご希望の受精卵で国内移植治療を進めていただきます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">よくあるご質問</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="font-bold mb-2">Q. 違法ではないのでしょうか？</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        法的に違法ではございません。日本国内では学会のガイドラインにより対象者が限定されていますが、法的な制約や罰則はなく、海外では社会倫理的にもファミリープランを支える技術として一般的です。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="font-bold mb-2">Q. 年齢制限はありますか？</p>
+                    <p class="text-sm text-slate-600">特に条件や年齢制限は設けておりません。どなたでもお気軽にご相談ください。</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="font-bold mb-2">Q. 輸送中の事故で溶けてしまいませんか？</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        過去1度もございません。ドライシッパーにより-196℃の温度帯を維持。万が一の貨物保険（航空貨物保険）も全プランに付帯しております。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="py-24 hero-gradient">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">新しい命のスタートをサポートします</h2>
+            <p class="text-slate-600 mb-12">医療的なアドバイスは行えませんが、クリニックの探し方や心理カウンセラーの紹介（無料）など、親身に対応いたします。まずはお気軽にお話しください。</p>
+            <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl inline-block w-full max-w-xl text-left border border-white">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 border-b border-slate-100 pb-4">
+                        <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 3z"/></svg></div>
+                        <span class="text-2xl font-bold tracking-tight">03-6206-2657</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
+                        <span class="text-lg">info@tane-fertility.co.jp</span>
+                    </div>
+                    <button class="w-full bg-emerald-600 text-white font-bold py-4 rounded-2xl hover:bg-emerald-700 transition shadow-lg shadow-emerald-200">面談予約・お見積り依頼</button>
+                    <p class="text-xs text-center text-slate-400">平日 9:00〜17:00 受付 | 東京オフィスにて面談可</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold">t</div>
+                        <span class="text-xl font-bold tracking-tighter text-emerald-600">tane <span class="text-slate-700 font-medium text-sm text-lg">株式会社</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        〒103-0007 東京都中央区日本橋浜町2-6-1 浜町パルクビル3階<br>
+                        健やかで豊かな社会づくりに貢献します。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-12 text-sm text-slate-500">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-emerald-600">ホーム</a></li>
+                        <li><a href="#" class="hover:text-emerald-600">PGT-Aとは</a></li>
+                        <li><a href="#" class="hover:text-emerald-600">費用について</a></li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-emerald-600">プライバシーポリシー</a></li>
+                        <li><a href="#" class="hover:text-emerald-600">特定商取引法</a></li>
+                        <li><a href="#" class="hover:text-emerald-600">会社情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-50 text-center text-xs text-slate-300">
+                &copy; 2024 tane Co., Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
