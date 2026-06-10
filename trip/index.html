@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Hakone Day Trip - 大人の箱根日帰り温泉ドライブ</title>
+  <title>Premium Hakone Day Trip - 富士屋ホテルで過ごす大人の極上ドライブ</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts -->
@@ -33,6 +33,10 @@
               800: '#744e1e',
               900: '#553917',
             },
+            royal: {
+              900: '#2b0a11', // クラシカルなバーガンディ（富士屋ホテルの格式を表現）
+              950: '#1a0509',
+            },
             slate: {
               950: '#0b0f19',
             }
@@ -50,63 +54,66 @@
       width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0b0f19;
+      background: #1a0509;
     }
     ::-webkit-scrollbar-thumb {
       background: #b88531;
       border-radius: 3px;
     }
     .text-shadow-premium {
-      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
     .gradient-overlay {
-      background: linear-gradient(to bottom, rgba(11,15,25,0.3) 0%, rgba(11,15,25,0.85) 80%, rgba(11,15,25,1) 100%);
+      background: linear-gradient(to bottom, rgba(26,5,9,0.3) 0%, rgba(26,5,9,0.85) 80%, rgba(26,5,9,1) 100%);
     }
   </style>
 </head>
-<body class="bg-slate-950 text-gray-100 font-sans antialiased selection:bg-gold-600 selection:text-white">
+<body class="bg-royal-950 text-gray-100 font-sans antialiased selection:bg-gold-600 selection:text-white">
 
   <!-- HERO SECTION -->
   <header class="relative h-[65vh] flex items-center justify-center overflow-hidden">
-    <!-- Background Design with elegant pattern and warm colors -->
-    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');">
-      <div class="absolute inset-0 bg-gradient-to-r from-purple-950/40 to-slate-950/50"></div>
+    <!-- Background Design with elegant classic hotel imagery -->
+    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80');">
+      <div class="absolute inset-0 bg-gradient-to-r from-royal-950/50 to-slate-950/60"></div>
     </div>
     <!-- Dark elegant overlay -->
     <div class="absolute inset-0 gradient-overlay z-10"></div>
     
     <!-- Content -->
     <div class="relative z-20 text-center px-4 max-w-3xl mx-auto mt-12">
-      <span class="font-playfair italic text-gold-400 text-lg tracking-widest block mb-3 animate-fade-in">Private Escape in Hakone</span>
+      <span class="font-playfair italic text-gold-400 text-lg tracking-widest block mb-3">Classic Luxury in Hakone</span>
       <h1 class="font-serif text-3xl md:text-5xl font-bold tracking-wider text-white leading-snug mb-4 text-shadow-premium">
-        大人の箱根日帰り温泉ドライブ
+        大人の箱根日帰りクラシックドライブ
       </h1>
       <p class="text-gold-200/90 text-sm md:text-base tracking-widest font-light">
-        久が原発 ｜ 平日の静寂に浸る、二人だけの極上エスケープ
+        久が原発 ｜ 富士屋ホテルで過ごす、時を超える優雅な休日
       </p>
       
       <!-- Quick Info Badges -->
       <div class="flex flex-wrap justify-center gap-3 mt-8">
         <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
-          🚗 久が原 往復
-        </span>
-        <span class="px-3 py-1 bg-gold-600/20 border border-gold-500/30 rounded-full text-xs text-gold-300">
-          ♨️ 天成園 (11:00〜14:00)
+          🚗 久が原 往復ドライブ
         </span>
         <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
-          🍰 芦ノ湖スイーツ＆絶景
+          🥢 駅前 湯本ランチ (10:45〜)
+        </span>
+        <span class="px-3 py-1 bg-gold-600/20 border border-gold-500/30 rounded-full text-xs text-gold-300">
+          🏨 富士屋ホテル (12:00〜15:00)
+        </span>
+        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
+          ☕ 宮ノ下レトロ散策
         </span>
       </div>
     </div>
   </header>
 
   <!-- NAVIGATION -->
-  <nav class="sticky top-0 bg-slate-950/90 backdrop-blur-md border-b border-white/5 z-50">
+  <nav class="sticky top-0 bg-royal-950/90 backdrop-blur-md border-b border-white/5 z-50">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-around py-4 text-sm font-medium tracking-wider">
+      <div class="flex justify-around py-4 text-xs md:text-sm font-medium tracking-wider">
         <a href="#itinerary" class="text-gold-400 hover:text-gold-300 transition">旅程タイムライン</a>
         <a href="#spots" class="text-gray-400 hover:text-gold-300 transition">周辺おすすめ</a>
-        <a href="#escort" class="text-gray-400 hover:text-gold-300 transition">エスコートの心得</a>
+        <a href="#escort" class="text-gray-400 hover:text-gold-300 transition">富士屋ホテルの美学</a>
         <a href="#checklist" class="text-gray-400 hover:text-gold-300 transition">準備リスト</a>
       </div>
     </div>
@@ -118,10 +125,12 @@
     <!-- CONCEPT INTRO -->
     <section class="text-center max-w-2xl mx-auto space-y-6">
       <div class="inline-block w-8 h-[1px] bg-gold-400 mb-2"></div>
-      <h2 class="font-serif text-2xl font-bold tracking-wide text-gold-300">平日にしか許されない、贅沢な時間の使い方</h2>
+      <h2 class="font-serif text-2xl font-bold tracking-wide text-gold-300">時を超える、クラシックホテルの美学に浸る一日</h2>
       <p class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
-        休日の喧騒から離れた、平日の静かな箱根。<br>
-        11:00から14:00までの天成園での贅沢な滞在を中心に、美しい芦ノ湖の景色、大人のための上質なカフェ、そして夕日を眺める海沿いの帰り道を組み合わせました。彼女への洗練されたエスコートを約束する、特別なプランです。
+        多くの著名人に愛されてきた、明治11年創業の「富士屋ホテル」。<br>
+        12:00のチェックインに合わせ、まずは箱根湯本の駅前で名物和ランチをゆっくりと味わってから宮ノ下へ。<br>
+        昭和・明治の薫り高い建築美、源泉から引かれた温泉、そして歴史を語る極上空間。<br>
+        日常から少し離れて、時を忘れる贅沢なひとときを二人で心ゆくまで楽しみましょう。
       </p>
       <div class="inline-block w-8 h-[1px] bg-gold-400 mt-2"></div>
     </section>
@@ -145,19 +154,18 @@
             <div class="flex items-center gap-4">
               <span class="font-playfair text-xl font-bold text-gold-400">09:00</span>
               <div>
-                <h4 class="font-semibold text-white">久が原出発・極上ドライブの始まり</h4>
-                <p class="text-xs text-gray-400">環八〜第三京浜〜西湘バイパス経由で箱根へ</p>
+                <h4 class="font-semibold text-white">久が原出発・湘南を望む快適なドライブ</h4>
+                <p class="text-xs text-gray-400">環八〜第三京浜〜西湘バイパスを駆け抜けて箱根へ</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail1">+</span>
           </button>
-          <div id="detail1" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>久が原の指定場所へお迎え。朝の爽やかな車内を演出するため、お気に入りのBGMと、少し上質な淹れたてコーヒーを用意してスタート。</p>
-            <div class="bg-slate-950/50 p-3 rounded-lg border border-white/5 space-y-1">
-              <strong class="text-gold-400 text-xs tracking-wider block">🚗 おすすめドライブコース:</strong>
+          <div id="detail1" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>久が原を出発。平日の朝のきもちいい空気を感じながら、西湘バイパスの潮風を窓の外に感じて箱根へ向かいます。お気に入りのBGMを流しながら、お喋りをしているうちにあっという間に箱根に到着です。</p>
+            <div class="bg-royal-950/50 p-3 rounded-lg border border-white/5 space-y-1">
+              <strong class="text-gold-400 text-xs tracking-wider block">🚗 ドライブのプチ情報:</strong>
               <p class="text-xs leading-relaxed text-gray-400">
-                久が原 ➡️ 玉川IC ➡️ 第三京浜 ➡️ 横浜新道 ➡️ 新湘南バイパス ➡️ 西湘バイパス ➡️ 箱根湯本<br>
-                ※西湘バイパスでは左手に青い海が一面に広がり、ドライブの雰囲気が一気に高まります。
+                お腹がすいた時やリフレッシュ用に、車内にはちょっとしたお菓子やお水も用意しています。のんびりリラックスして助手席からの景色を楽しんでくださいね。
               </p>
             </div>
           </div>
@@ -169,55 +177,70 @@
             <div class="flex items-center gap-4">
               <span class="font-playfair text-xl font-bold text-gold-400">10:45</span>
               <div>
-                <h4 class="font-semibold text-white">箱根湯本 到着・天成園の日本庭園を散策</h4>
-                <p class="text-xs text-gray-400">チェックイン前の心地よいアプローチ</p>
+                <h4 class="font-semibold text-white flex items-center gap-2">
+                  箱根湯本到着・駅前の名店で早めの贅沢ランチ 
+                  <span class="bg-gold-500 text-royal-950 font-bold text-[9px] px-1.5 py-0.5 rounded">NEW</span>
+                </h4>
+                <p class="text-xs text-gray-400">混雑を賢く避けて、おいしい湯本グルメ体験</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail2">+</span>
           </button>
-          <div id="detail2" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>天成園の駐車場にスマートに車を停め、敷地内へ。11:00のチェックインまで、少しだけ自慢の庭園を二人で歩きます。</p>
-            <ul class="list-disc pl-5 text-xs text-gray-400 space-y-1">
-              <li><strong>玉簾の瀧（たまだれのたき）:</strong> パワースポットとしても有名。澄んだ水の音に癒やされます。</li>
-              <li><strong>玉簾神社:</strong> 箱根神社の唯一の分宮で、縁結びの神様。二人で静かにお参り。</li>
-            </ul>
+          <div id="detail2" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>12:00のホテルチェックイン前に、箱根湯本周辺でお腹を満たします。平日でも混み合う人気エリアですが、少し早めのアプローチでスムーズに楽しむための2大候補です。</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="bg-royal-950/50 p-3 rounded-lg border border-white/5">
+                <span class="text-gold-400 text-xs font-bold block mb-1">🍜 候補①：箱根湯本「はつ花 本店」</span>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  <strong>営業時間：10:00〜</strong><br>
+                  自然薯（じねんじょ）を贅沢に使った絶品の「せいろそば」が名物。朝10時から営業しているので、10:45頃に滑り込めば並ばずに、極上のこだわり蕎麦をすぐに味わうことができます。
+                </p>
+              </div>
+              <div class="bg-royal-950/50 p-3 rounded-lg border border-white/5">
+                <span class="text-gold-400 text-xs font-bold block mb-1">🍲 候補②：湯葉丼「直吉」</span>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  <strong>営業時間：11:00〜</strong><br>
+                  姫の水で作られた絶品湯葉をアツアツの土鍋で楽しむ人気店。10:30から店頭の整理券発券機が動き始めるので、先に発券を済ませて周辺を少しお散歩し、11:00の開店と同時に入るのがスムーズです。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Spot 3: MAIN EVENT -->
-        <div class="bg-gold-950/10 border-2 border-gold-500/30 rounded-xl overflow-hidden transition-all duration-300 shadow-lg shadow-gold-950/20">
+        <!-- Spot 3: MAIN EVENT (FUJIYA HOTEL) -->
+        <div class="bg-gold-950/15 border-2 border-gold-500/30 rounded-xl overflow-hidden transition-all duration-300 shadow-lg shadow-gold-950/20">
           <button onclick="toggleDetails('detail3')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
             <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">11:00</span>
-              <div class="flex items-center gap-2">
-                <div>
-                  <h4 class="font-semibold text-white flex items-center gap-2">
-                    天成園チェックイン <span class="bg-gold-500 text-slate-950 font-bold text-[10px] px-1.5 py-0.5 rounded">メイン滞在</span>
-                  </h4>
-                  <p class="text-xs text-gold-300">客室プライベート温泉 ＆ 贅沢なランチ（〜14:00）</p>
-                </div>
+              <span class="font-playfair text-xl font-bold text-gold-400">12:00</span>
+              <div>
+                <h4 class="font-semibold text-white flex items-center gap-2">
+                  富士屋ホテル チェックイン 
+                  <span class="bg-gold-500 text-royal-950 font-bold text-[10px] px-1.5 py-0.5 rounded">憧れのクラシック滞在</span>
+                </h4>
+                <p class="text-xs text-gold-300">極上の貸切温泉 ＆ 伝統が息づくプライベート空間（〜15:00）</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail3">+</span>
           </button>
-          <div id="detail3" class="hidden px-5 pb-5 border-t border-gold-500/20 text-sm text-gray-300 space-y-4 pt-4 bg-gold-950/5">
-            <p>日帰り個室（客室）プランを利用して、贅沢なプライベートステイ。誰にも邪魔されない極上の3時間を満喫します。</p>
+          <div id="detail3" class="hidden px-5 pb-5 border-t border-gold-500/20 text-sm text-gray-300 space-y-4 pt-4 bg-royal-950/40">
+            <p>いよいよ憧れの「富士屋ホテル」へ。車をエントランスに寄せるだけで、格式高い極上のホスピタリティに迎えられます。</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="bg-slate-900/80 p-4 rounded-lg border border-white/5">
-                <span class="text-gold-400 text-xs font-bold block mb-1">♨️ プライベート温泉</span>
+              <div class="bg-royal-900/80 p-4 rounded-lg border border-white/5">
+                <span class="text-gold-400 text-xs font-bold block mb-1">🛀 宮ノ下天然温泉を貸切でゆったりと</span>
                 <p class="text-xs text-gray-400 leading-relaxed">
-                  事前予約した「源泉かけ流し貸切風呂」へ。平日の静けさの中、お二人だけでゆっくりとお湯に浸かり、日頃の疲れを癒やしてください。
+                  事前予約した、とっておきの「源源かけ流し貸切風呂（プライベートデイスパ）」へ。富士屋ホテルが誇る宮ノ下の天然源泉を、誰にも邪魔されない極上の貸切空間で。心地よく香るアメニティとともに、時を忘れる優雅なバスタイムを二人で満喫しましょう。
                 </p>
               </div>
-              <div class="bg-slate-900/80 p-4 rounded-lg border border-white/5">
-                <span class="text-gold-400 text-xs font-bold block mb-1">🍱 贅沢なお風呂上がりランチ</span>
+              <div class="bg-royal-900/80 p-4 rounded-lg border border-white/5">
+                <span class="text-gold-400 text-xs font-bold block mb-1">🕰️ 歴史ある館内と庭園の散策</span>
                 <p class="text-xs text-gray-400 leading-relaxed">
-                  個室（または食事処）にて、厳選された山海の幸を盛り込んだお食事を堪能。お風呂上がりのリラックスした気分で、お箸を勧め合って。
+                  お風呂上がりは心地よいお部屋でのんびり過ごしたり、ラウンジや、四季折々の美しい表情を見せる広大な日本庭園を散策。国の登録有形文化財でもある、素晴らしい彫刻や和洋折衷の美しい建築はどこを切り取っても絵になります。
                 </p>
               </div>
             </div>
-            <p class="text-xs text-gold-300 italic">※14:00チェックアウトのため、13:45頃から身支度を始めるとスマートです。タオルやアメニティは完備されているため、手ぶらでスマートに行動できます。</p>
+            <p class="text-xs text-gold-300 italic">★ホテルの過ごし方：クラシカルで美しいロビーや庭園は、どこで写真を撮っても抜群の雰囲気になります。お気に入りの装いで、特別な非日常の空間を楽しんでくださいね。</p>
           </div>
         </div>
 
@@ -225,17 +248,19 @@
         <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-gold-500/30">
           <button onclick="toggleDetails('detail4')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
             <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">14:00</span>
+              <span class="font-playfair text-xl font-bold text-gold-400">15:00</span>
               <div>
-                <h4 class="font-semibold text-white">天成園チェックアウト・芦ノ湖へドライブ</h4>
-                <p class="text-xs text-gray-400">新緑、または紅葉の美しい「箱根新道」を通って芦ノ湖へ</p>
+                <h4 class="font-semibold text-white">チェックアウト・「ベーカリー＆スイーツ ピコット」でお買い物</h4>
+                <p class="text-xs text-gray-400">伝統のアップルパイやレーズンパンをご自宅のお土産に</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail4">+</span>
           </button>
-          <div id="detail4" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>天成園をチェックアウト。体が芯から温まった状態で、涼しく心地よい箱根の風を感じながら「箱根新道」を芦ノ湖方面へ駆け上がります（約20分）。</p>
-            <p class="text-xs text-gray-400">標高が高くなるにつれ、窓を開けるとひんやりとした清涼な空気が車内に流れ込みます。</p>
+          <div id="detail4" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>チェックアウト後、ホテルの歴史を物語る展示が並ぶ「史料展示室」を少し覗いたあと、敷地内にある大人気のパン屋「PICOT（ピコット）」を訪れます。</p>
+            <p class="text-xs text-gray-400">
+              かつて宮内庁御用達でもあった富士屋ホテル伝統のレシピで作られる、ずっしりとした「アップルパイ」や、クラシックな「カレーパン」など、おうち用のお土産にもぴったりな逸品がたくさん並んでいます。
+            </p>
           </div>
         </div>
 
@@ -243,25 +268,22 @@
         <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-gold-500/30">
           <button onclick="toggleDetails('detail5')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
             <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">14:30</span>
+              <span class="font-playfair text-xl font-bold text-gold-400">15:20</span>
               <div>
-                <h4 class="font-semibold text-white">「サロン・ド・テ ロザージュ」で絶景ティータイム</h4>
-                <p class="text-xs text-gray-400">芦ノ湖畔に佇む、大人のプレミアムデザートカフェ</p>
+                <h4 class="font-semibold text-white">「NARAYA CAFE」宮ノ下で足湯チルタイム</h4>
+                <p class="text-xs text-gray-400">富士屋ホテルからすぐ。情緒ある古民家で過ごす午後のひととき</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail5">+</span>
           </button>
-          <div id="detail5" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>芦ノ湖の湖畔、山のホテル直営の紅茶専門店「ロザージュ」へ。</p>
-            <div class="bg-slate-950/50 p-4 rounded-lg border border-white/5">
+          <div id="detail5" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>宮ノ下の交差点近くにある、とてもお洒落な古民家カフェ「NARAYA CAFE」へ立ち寄ります（富士屋ホテルから車で約2分の好アクセス）。</p>
+            <div class="bg-royal-950/50 p-4 rounded-lg border border-white/5">
               <p class="text-xs text-gray-300 leading-relaxed mb-2">
-                目の前に穏やかな芦ノ湖が広がるテラス席（または大きな窓の屋内席）で、日本紅茶協会認定の極上の紅茶を。
+                ウッドデッキのテラスに設けられた、源泉かけ流しの「足湯」にのんびり浸かりながら、こだわりの抹茶や可愛いひょうたん型の最中（ならやん）、淹れたてのコーヒーを楽しめます。
               </p>
               <p class="text-xs text-gold-300 font-semibold">
-                ★マストオーダー：伝統のオリジナル「ロザージュ伝統のあつあつアップルパイ」
-              </p>
-              <p class="text-[11px] text-gray-400 mt-1">
-                目の前でスタッフがソースを使って、お皿に美しい花のアートを描いてくれる人気の演出。彼女が笑顔になること間違いなしです。
+                ★お風呂上がりのリラックス：心地よいポカポカ感を残したまま、平日の穏やかな山あいの空気を感じて過ごす、とっておきのチルタイムです。
               </p>
             </div>
           </div>
@@ -271,18 +293,18 @@
         <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-gold-500/30">
           <button onclick="toggleDetails('detail6')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
             <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">15:45</span>
+              <span class="font-playfair text-xl font-bold text-gold-400">16:45</span>
               <div>
-                <h4 class="font-semibold text-white">箱根神社・平和の鳥居散策</h4>
-                <p class="text-xs text-gray-400">芦ノ湖に浮かぶ神秘的な鳥居を愛でる</p>
+                <h4 class="font-semibold text-white">帰路へ・湘南海岸のサンセットラインをなぞって</h4>
+                <p class="text-xs text-gray-400">クラシカルで贅沢な余韻をそのままに、心地よいドライブ</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail6">+</span>
           </button>
-          <div id="detail6" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>ロザージュからすぐ近くの箱根神社へ。大きな杉の木々に囲まれた参道を歩き、少し涼しい空気を感じながら湖畔の「平和の鳥居」までお散歩。</p>
-            <p class="text-xs text-gray-400">
-              夕方が近づく平日の神社はとても静か。神秘的な写真を撮り合ったり、九頭龍神社新宮で「龍神水」に触れたりして、より深いお喋りを楽しんで。
+          <div id="detail6" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>宮ノ下を下り、西湘バイパスから国道134号線へ。ちょうど夕日が相模湾を紅く、あるいは黄金色に染め上げる美しいマジックアワーに差し掛かります。</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              心地よい温まり効果で少し眠くなったら、シートを倒して助手席でゆっくり休んでください。車内の温度を快適に整え、優しいチルミュージックとともに、揺れの少ない静かな運転で安全にお送りします。
             </p>
           </div>
         </div>
@@ -291,37 +313,19 @@
         <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-gold-500/30">
           <button onclick="toggleDetails('detail7')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
             <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">16:45</span>
+              <span class="font-playfair text-xl font-bold text-gold-400">19:30</span>
               <div>
-                <h4 class="font-semibold text-white">西湘バイパス〜夕暮れの湘南ドライブで帰路へ</h4>
-                <p class="text-xs text-gray-400">サンセットタイムに合わせたエモーショナルな帰り道</p>
+                <h4 class="font-semibold text-white">久が原に到着</h4>
+                <p class="text-xs text-gray-400">最高の一日の終わりと、心地よいおやすみを</p>
               </div>
             </div>
             <span class="text-gold-400 text-xl font-light" id="icon-detail7">+</span>
           </button>
-          <div id="detail7" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>箱根を後にし、小田原方面へ下ります。帰りはあえて西湘バイパスから国道134号線の湘南海岸へ。</p>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              夕暮れ時、江の島や富士山のシルエットが夕日に染まるロマンチックな光景を車内から楽しめます。お風呂上がりで少し眠そうな彼女のために、車内温度をやや高めにし、落ち着いたジャズやバラードをセレクト。
+          <div id="detail7" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-royal-900/40">
+            <p>久が原のご指定の場所へ到着。</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-2">
+              「最高の思い出をありがとう。ゆっくり休んでね」と、ピコットで選んだアップルパイなどをお渡しして、楽しかった一日の余韻とともに心地よく解散です。
             </p>
-          </div>
-        </div>
-
-        <!-- Spot 8 -->
-        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-gold-500/30">
-          <button onclick="toggleDetails('detail8')" class="w-full text-left p-5 flex items-center justify-between focus:outline-none">
-            <div class="flex items-center gap-4">
-              <span class="font-playfair text-xl font-bold text-gold-400">19:30</span>
-              <div>
-                <h4 class="font-semibold text-white">久が原に到着・スマートに解散</h4>
-                <p class="text-xs text-gray-400">心地よい余韻を残して、次回の約束を</p>
-              </div>
-            </div>
-            <span class="text-gold-400 text-xl font-light" id="icon-detail8">+</span>
-          </button>
-          <div id="detail8" class="hidden px-5 pb-5 border-t border-white/5 text-sm text-gray-300 space-y-3 pt-4 bg-slate-900/40">
-            <p>久が原のご指定場所へ到着。「今日は最高の1日を本当にありがとう」と、お土産をさりげなく持たせて。スマートに解散します。</p>
-            <p class="text-xs text-gold-300 italic">★帰宅後、1時間ほど経ってから「無事おうちに着いた？今日は〇〇の笑顔がたくさん見られて嬉しかったよ」と優しくLINEを送ると、完璧なアフターフォローになります。</p>
           </div>
         </div>
 
@@ -333,24 +337,24 @@
       <div class="mb-8 border-b border-white/10 pb-4">
         <h3 class="font-serif text-2xl font-bold tracking-wide text-gold-300 flex items-center gap-2">
           <span class="text-xs font-playfair uppercase tracking-widest text-gold-500 block">Nearby Spots</span>
-          天成園の近隣おすすめスポット
+          宮ノ下・富士屋ホテル周辺のおすすめ
         </h3>
-        <p class="text-xs text-gray-400 mt-1">天気の変化や、気分によって組み合わせを変更できる厳選されたスポットです。</p>
+        <p class="text-xs text-gray-400 mt-1">滞在時間の前後や、当日の気分に合わせてフレキシブルに組み合わせられる厳選周辺スポットです。</p>
       </div>
 
       <!-- Category Filter Tabs -->
       <div class="flex gap-2 mb-6 overflow-x-auto pb-2">
-        <button onclick="filterSpots('all')" id="tab-all" class="px-4 py-2 bg-gold-600 text-slate-950 font-semibold text-xs rounded-full whitespace-nowrap transition-all duration-300">
+        <button onclick="filterSpots('all')" id="tab-all" class="px-4 py-2 bg-gold-600 text-royal-950 font-semibold text-xs rounded-full whitespace-nowrap transition-all duration-300">
           すべて
+        </button>
+        <button onclick="filterSpots('gourmet')" id="tab-gourmet" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-xs rounded-full whitespace-nowrap transition-all duration-300">
+          🥢 駅前ランチ・お土産
         </button>
         <button onclick="filterSpots('cafe')" id="tab-cafe" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-xs rounded-full whitespace-nowrap transition-all duration-300">
           ☕ お洒落カフェ
         </button>
         <button onclick="filterSpots('sightseeing')" id="tab-sightseeing" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-xs rounded-full whitespace-nowrap transition-all duration-300">
-          ⛩️ 観光・絶景
-        </button>
-        <button onclick="filterSpots('gourmet')" id="tab-gourmet" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-xs rounded-full whitespace-nowrap transition-all duration-300">
-          🎁 お土産・グルメ
+          🌲 クラシック散策
         </button>
       </div>
 
@@ -358,91 +362,91 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Spot Card 1 -->
-        <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="cafe">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="gourmet">
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">CAFE</span>
-            <h4 class="font-semibold text-white text-base">サロン・ド・テ ロザージュ</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">LUNCH / SOBA</span>
+            <h4 class="font-semibold text-white text-base">はつ花 本店（自然薯蕎麦）</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              芦ノ湖に浮かぶようなテラス。絶品アップルパイと美味しい紅茶を。カップルに最高のロケーション。
+              箱根湯本駅前。水を使わず、自然薯と卵だけで練り上げたお蕎麦は格別の滑らかさ。10:00営業開始なので、12:00チェックイン前のブランチに最適。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 天成園から車で約25分
+              📍 箱根湯本駅から徒歩5分
             </div>
           </div>
         </div>
 
         <!-- Spot Card 2 -->
-        <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="sightseeing">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="gourmet">
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">SIGHTSEEING</span>
-            <h4 class="font-semibold text-white text-base">箱根神社 & 平和の鳥居</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">LUNCH / YUBA</span>
+            <h4 class="font-semibold text-white text-base">湯葉丼 直吉（なおきち）</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              芦ノ湖の最も神聖なスポット。朱色の鳥居が湖面に美しく輝く。縁結び・心願成就のパワースポット。
+              箱根の美味しい名水で作られた特製湯葉を、熱々の出汁土鍋でとじる大人気メニュー。11:00開店直後を狙うのがベスト。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 天成園から車で約25分
+              📍 箱根湯本駅から早川沿いへ徒歩3分
             </div>
           </div>
         </div>
 
         <!-- Spot Card 3 -->
         <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="cafe">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">CAFE / SWEETS</span>
-            <h4 class="font-semibold text-white text-base">一夜城ヨロイヅカファーム</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">CAFE / FOOTBATH</span>
+            <h4 class="font-semibold text-white text-base">NARAYA CAFE（宮ノ下）</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              鎧塚俊彦シェフが手掛ける極上カフェ＆パティスリー。相模湾を一望できるガーデンが圧巻。
+              情緒豊かなウッドデッキの足湯カフェ。かわいい瓢箪スイーツと、お風呂上がりのチルなひとときに最も愛されるスポット。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 箱根新道経由（小田原方面へ戻る途中）
+              📍 富士屋ホテルから徒歩・車ですぐ
             </div>
           </div>
         </div>
 
         <!-- Spot Card 4 -->
         <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="gourmet">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">SHOP / GOURMET</span>
-            <h4 class="font-semibold text-white text-base">鈴廣かまぼこの里</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">BAKERY / SOUVENIR</span>
+            <h4 class="font-semibold text-white text-base">ベーカリー＆スイーツ ピコット</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              お土産選びならここ。美味しい地ビールや、平日の静かな「かまぼこバー」で極上かまぼこの食べ比べも。
+              富士屋ホテル直営。クラシックアップルパイの他、歴代のレシピを引き継ぐクラシックカレーパンなど、どれを選んでも絶品です。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 天成園から車で約12分（帰り道）
+              📍 富士屋ホテル 敷地内
             </div>
           </div>
         </div>
 
         <!-- Spot Card 5 -->
         <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="sightseeing">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">SIGHTSEEING / ART</span>
-            <h4 class="font-semibold text-white text-base">彫刻の森美術館</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">HISTORIC / GARDEN</span>
+            <h4 class="font-semibold text-white text-base">富士屋ホテル 庭園＆史料室</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              もし雨や風がない素晴らしい天候なら、天成園のあと屋外彫刻のアートを二人で手を繋ぎながら散策するのも優雅。
+              かつてチャップリンやジョン・レノンらの歴史的なサインが展示される史料室。水車の回る美しい庭園を浴衣やドレスで優雅にお散歩。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 天成園から車で約15分
+              📍 富士屋ホテル 館内
             </div>
           </div>
         </div>
 
         <!-- Spot Card 6 -->
         <div class="spot-card bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:border-gold-500/30" data-category="cafe">
-          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="h-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'); border-bottom: 1px solid rgba(255,255,255,0.05);"></div>
           <div class="p-5 space-y-2">
-            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">CAFE / CAKERY</span>
-            <h4 class="font-semibold text-white text-base">NARAYA CAFE</h4>
+            <span class="text-[10px] bg-gold-600/20 text-gold-300 px-2 py-0.5 rounded font-semibold tracking-wider">CAFE / LOUNGE</span>
+            <h4 class="font-semibold text-white text-base">ラウンジ・ウィステリア</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              足湯に浸かりながら挽きたてのコーヒーや特製スイーツを楽しめる、風情あふれる大人な古民家リノベーションカフェ。
+              ホテル本館に位置する、美しい庭園を全面に望む極上ラウンジ。クラシック音楽の流れる中、名物のケーキや紅茶で至福のティータイムを。
             </p>
             <div class="text-[11px] text-gray-500 flex items-center gap-1">
-              📍 天成園から車で約10分
+              📍 富士屋ホテル 本館
             </div>
           </div>
         </div>
@@ -450,16 +454,130 @@
       </div>
     </section>
 
+    <!-- ESCORT KNOWLEDGE -->
+    <section id="escort" class="scroll-mt-24 bg-gradient-to-br from-royal-900 to-slate-950 border border-gold-500/15 rounded-2xl p-6 md:p-8 space-y-6">
+      <div class="text-center md:text-left space-y-2">
+        <span class="text-xs font-playfair uppercase tracking-widest text-gold-400">Classic Hotel Aesthetic</span>
+        <h3 class="font-serif text-2xl font-bold tracking-wide text-gold-300">富士屋ホテルの美学をより深く楽しむプチ知識</h3>
+      </div>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <span class="text-gold-400 font-bold">1.</span>
+            <div>
+              <strong class="text-white block mb-1">お気に入りの装いを旅の一部に</strong>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                明治の薫り残る富士屋ホテルは、一歩踏み入れるだけで映画のセットに入り込んだような格式高さ。スマートカジュアルやお気に入りのお洒落な洋服を身に纏うだけで、空間の美しさと相まってより特別な気分に浸ることができます。
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-gold-400 font-bold">2.</span>
+            <div>
+              <strong class="text-white block mb-1">バレーパーキングから始まる一流のおもてなし</strong>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                ホテルのエントランスに車を寄せると、すぐコンシェルジュがキーを預かって駐車場へと手配してくれます。重い荷物を運ぶ必要もなく、そのままスムーズにロビーへと足を進める優雅なチェックイン体験が待っています。
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <span class="text-gold-400 font-bold">3.</span>
+            <div>
+              <strong class="text-white block mb-1">混雑を賢く避ける「湯本ランチ」の楽しさ</strong>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                12:00のホテル入りを逆算し、10:45頃に湯本に着くことで、名店のお蕎麦や熱々の湯葉丼をほとんど並ばずに堪能できます。ゆとりを持たせた美味しいスタートが、最高の一日を予感させてくれます。
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-gold-400 font-bold">4.</span>
+            <div>
+              <strong class="text-white block mb-1">伝統の味「クラシック・アップルパイ」</strong>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                直営ベーカリー「ピコット」のアップルパイは、かつて多くの著名人に愛されたレシピを大切に受け継いでいます。シナモンが上品に香る重厚な味わいは、旅の余韻をご自宅で楽しむのにも、贈り物にも最適です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CHECKLIST -->
+    <section id="checklist" class="scroll-mt-24">
+      <div class="mb-8 border-b border-white/10 pb-4">
+        <h3 class="font-serif text-2xl font-bold tracking-wide text-gold-300 flex items-center gap-2">
+          <span class="text-xs font-playfair uppercase tracking-widest text-gold-500 block">Checklist</span>
+          お出かけの準備・持ち物リスト
+        </h3>
+        <p class="text-xs text-gray-400 mt-1">当日、富士屋ホテルと宮ノ下散策をさらに心地よくスマートに楽しむためのチェックリストです。</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="checklist-container">
+          
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">お気に入りのお洒落な装い</span>
+              <span class="text-[11px] text-gray-400">歴史的な建築美に調和する、お気に入りの綺麗めスタイル。お互いのドレスアップした姿を見るのも楽しみのひとつ。</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">歩きやすい靴・パンプス</span>
+              <span class="text-[11px] text-gray-400">ホテルの広大な日本庭園や、宮ノ下のレトロな古民家散策を楽しむため、少し歩きやすい靴がおすすめです。</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">カメラ・スマートフォンの充電</span>
+              <span class="text-[11px] text-gray-400">富士屋ホテルの素晴らしいロビー、チャペル、日本庭園、NARAYA CAFEの足湯など、とびきり絵になるフォトスポットがいっぱいです。</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">羽織るもの（カーディガンやストールなど）</span>
+              <span class="text-[11px] text-gray-400">箱根の山の上は都会より少し涼しく感じることも。夕方のテラス席や、エアコン対策のために1枚あると安心です。</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">お気に入りのスキンケア（温泉用）</span>
+              <span class="text-[11px] text-gray-400">ホテルの貸切温泉にも充実のアメニティがありますが、お肌に合わせたご愛用の基礎化粧品等があるとより快適です（タオル等は完備のため不要です）。</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition">
+            <input type="checkbox" class="w-4 h-4 mt-0.5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-royal-950 accent-gold-500">
+            <div>
+              <span class="text-xs font-semibold text-white block">お土産用のエコバッグ</span>
+              <span class="text-[11px] text-gray-400">直営「ピコット」のアップルパイやパン、宮ノ下でみつけた可愛い和小物などを、サッとまとめるお洒落なバッグがあると便利。</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-white/5 py-12 text-center text-xs text-gray-500 tracking-wider">
+  <footer class="bg-royal-950 border-t border-white/5 py-12 text-center text-xs text-gray-500 tracking-wider">
     <div class="max-w-6xl mx-auto px-4 space-y-4">
-      <p class="font-playfair italic text-gold-500 text-base">Make a beautiful memory with her.</p>
-      <p>© 2026 Premium Hakone Drive Plan. Designed for a Special Day.</p>
+      <p class="font-playfair italic text-gold-500 text-base">Make a beautiful luxury memory together.</p>
+      <p>© 2026 Premium Hakone Fujiya Hotel Plan. Crafted with Elegance.</p>
     </div>
   </footer>
 
@@ -486,13 +604,13 @@
     // Filter Spots Function
     function filterSpots(category) {
       const cards = document.querySelectorAll('.spot-card');
-      const tabs = ['all', 'cafe', 'sightseeing', 'gourmet'];
+      const tabs = ['all', 'gourmet', 'cafe', 'sightseeing'];
       
       // Update Tab Styles
       tabs.forEach(tab => {
         const tabEl = document.getElementById('tab-' + tab);
         if (tab === category) {
-          tabEl.className = "px-4 py-2 bg-gold-600 text-slate-950 font-semibold text-xs rounded-full whitespace-nowrap transition-all duration-300";
+          tabEl.className = "px-4 py-2 bg-gold-600 text-royal-950 font-semibold text-xs rounded-full whitespace-nowrap transition-all duration-300";
         } else {
           tabEl.className = "px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-xs rounded-full whitespace-nowrap transition-all duration-300";
         }
@@ -508,9 +626,10 @@
       });
     }
 
-    // Default open the 天成園 check-in detail (Main item)
+    // Default open the Fujiya Hotel check-in detail (Main item) and Lunch detail on load
     window.onload = function() {
-      toggleDetails('detail3');
+      toggleDetails('detail2'); // Lunch detail
+      toggleDetails('detail3'); // Fujiya Hotel check-in detail
     }
   </script>
 </body>
