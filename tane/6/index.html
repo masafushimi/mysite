@@ -18,9 +18,9 @@
                             'emerald-light': '#115C44',
                             orange: '#E6724E',  // 寄り添いのテラコッタオレンジ
                             'orange-light': '#F38E6C',
-                            bg: '#FBFBFC',      // 最新画像に準拠したクリーンで明るいオフホワイト
+                            bg: '#FBFBFC',      // クリーンで明るいオフホワイト
                             line: '#02C654',    // LINE公式の鮮やかなグリーン
-                            tealBtn: '#126A4F'  // 最新画像のオンラインカウンセリング用ティール
+                            tealBtn: '#126A4F'  // オンラインカウンセリング用ティール
                         }
                     },
                     fontFamily: {
@@ -60,7 +60,7 @@
             animation: soft-bounce 3.2s ease-in-out infinite;
         }
         
-        /* 【重要】女性画像の背景の「薄い影」を完全に透過し、LP背景と同化させる乗算処理 */
+        /* 女性画像の背景の「薄い影」を完全に透過し、LP背景と同化させる乗算処理 */
         .blend-multiply {
             mix-blend-mode: multiply;
         }
@@ -119,7 +119,7 @@
         </div>
     </nav>
 
-    <!-- Page 1: HERO (最新の高精細カンプを寸分違わず再現) -->
+    <!-- Page 1: HERO (最新の高精細カンプを寸分違わずシームレス再現) -->
     <section class="pt-24 lg:pt-28 pb-16 bg-[#FBFBFC] overflow-hidden relative min-h-[640px] flex items-center">
         
         <!-- 左側に浮遊する優美な羽 (SVGグラフィック) -->
@@ -139,7 +139,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-4 items-center">
                 
-                <!-- Left Column: メッセージ ＋ お悩み検索 ＋ W大CTA -->
+                <!-- Left Column: メッセージ ＋ お悩み検索 ＋ W大CTA (高さ最適化済み) -->
                 <div class="lg:col-span-7 text-left space-y-7 z-10">
                     
                     <div class="space-y-4">
@@ -159,7 +159,7 @@
                     </div>
 
                     <!-- 「あなたの悩みから探す」フロートカード -->
-                    <div class="bg-white/80 backdrop-blur-md border border-slate-100 rounded-[1.8rem] p-6 md:p-7 space-y-4.5 shadow-xl shadow-slate-100/50 max-w-[620px]">
+                    <div class="bg-white/80 backdrop-blur-md border border-slate-100 rounded-[1.8rem] p-6 md:p-7 space-y-4 shadow-xl shadow-slate-100/50 max-w-[620px]">
                         <p class="text-slate-900 font-bold text-[13.5px] flex items-center gap-2 border-b border-slate-100 pb-3">
                             <span class="bg-[#D55F3C] text-white p-1 rounded-md flex items-center justify-center">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
@@ -168,7 +168,7 @@
                             </span>
                             あなたの悩みから探す
                         </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
                             <!-- Worry 1 -->
                             <div class="flex items-center gap-3 cursor-default group">
                                 <div class="flex-shrink-0 w-5 h-5 border-2 border-[#E6724E]/80 rounded flex items-center justify-center bg-orange-50/50 group-hover:bg-[#E6724E] group-hover:border-[#E6724E] transition-colors">
@@ -200,16 +200,16 @@
                         </div>
                     </div>
 
-                    <!-- W極大CTAボタン -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4.5 max-w-[620px]">
+                    <!-- W極大CTAボタン (バグ修正版：高さを同一に完全固定しズレを排除) -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 max-w-[620px] w-full">
                         <!-- LINE公式グリーンボタン -->
-                        <a href="https://line.me" class="group relative flex items-center justify-between bg-gradient-to-r from-brand-line to-[#05D35E] hover:from-[#02B34C] hover:to-[#04C054] text-white px-7 py-4 rounded-full font-bold tracking-widest transition-all duration-300 shadow-xl shadow-brand-line/20 flex-1">
+                        <a href="https://line.me" class="group relative flex items-center justify-between bg-gradient-to-r from-brand-line to-[#05D35E] hover:from-[#02B34C] hover:to-[#04C054] text-white px-7 rounded-full font-bold tracking-widest transition-all duration-300 shadow-xl shadow-brand-line/20 flex-1 w-full h-[62px]">
                             <div class="flex items-center gap-3">
                                 <!-- LINEマーク風SVG -->
-                                <svg class="w-6.5 h-6.5 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-4.58-4.785-8.304-10.688-8.304-5.903 0-10.688 3.724-10.688 8.304 0 4.104 3.792 7.545 8.916 8.196l-1.076 3.25c-.12.36.262.695.58.468l6.388-4.46c3.488-.636 5.568-3.41 5.568-7.462zm-15.842 3.328c-.287 0-.52-.233-.52-.52v-3.76h-1.325c-.287 0-.52-.233-.52-.52s.233-.52.52-.52h2.365c.287 0 .52.233.52.52v4.28c0 .287-.233.52-.52.52zm3.32-.52c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v4.28zm5.27.52h-2.152c-.287 0-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v3.24h1.632c.287 0 .52.233.52.52s-.233.52-.52.52zm3.628-1.04c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-2.02l-1.42 2.37c-.105.176-.29.28-.49.28-.2 0-.385-.104-.49-.28l-1.42-2.37v2.02c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52.2 0 .385.104.49.28l1.94 3.235 1.94-3.235c.105-.176.29-.28.49-.28.287 0 .52.233.52.52v4.28z"/></svg>
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-4.58-4.785-8.304-10.688-8.304-5.903 0-10.688 3.724-10.688 8.304 0 4.104 3.792 7.545 8.916 8.196l-1.076 3.25c-.12.36.262.695.58.468l6.388-4.46c3.488-.636 5.568-3.41 5.568-7.462zm-15.842 3.328c-.287 0-.52-.233-.52-.52v-3.76h-1.325c-.287 0-.52-.233-.52-.52s.233-.52.52-.52h2.365c.287 0 .52.233.52.52v4.28c0 .287-.233.52-.52.52zm3.32-.52c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v4.28zm5.27.52h-2.152c-.287 0-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v3.24h1.632c.287 0 .52.233.52.52s-.233.52-.52.52zm3.628-1.04c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-2.02l-1.42 2.37c-.105.176-.29.28-.49.28-.2 0-.385-.104-.49-.28l-1.42-2.37v2.02c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52.2 0 .385.104.49.28l1.94 3.235 1.94-3.235c.105-.176.29-.28.49-.28.287 0 .52.233.52.52v4.28z"/></svg>
                                 <div class="text-left leading-none">
-                                    <p class="text-[9px] opacity-90 font-medium mb-1">登録無料・24時間受付</p>
-                                    <p class="text-[14.5px] tracking-wider">LINEまずは相談してみる</p>
+                                    <p class="text-[9px] opacity-90 font-medium mb-1.5">登録無料・24時間受付</p>
+                                    <p class="text-[14px] md:text-[15px] tracking-wider font-bold">LINEまずは相談してみる</p>
                                 </div>
                             </div>
                             <span class="transform group-hover:translate-x-1 transition-transform duration-300">
@@ -217,10 +217,10 @@
                             </span>
                         </a>
 
-                        <!-- オンラインカウンセリングティールボタン -->
-                        <a href="#contact" class="group flex items-center justify-center gap-2.5 bg-brand-emerald text-white px-7 py-4.5 rounded-full font-bold tracking-widest transition-all duration-300 text-center shadow-xl shadow-brand-emerald/20 flex-1 hover:bg-brand-emerald-light">
+                        <!-- オンラインカウンセリングエメラルドグリーンボタン -->
+                        <a href="#contact" class="group flex items-center justify-center gap-2.5 bg-brand-emerald text-white px-7 rounded-full font-bold tracking-widest transition-all duration-300 text-center shadow-xl shadow-brand-emerald/20 flex-1 w-full h-[62px] hover:bg-brand-emerald-light">
                             <svg class="w-5 h-5 fill-none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                            <span class="text-[14.5px] tracking-wider">オンラインカウンセリング</span>
+                            <span class="text-[14px] md:text-[15px] tracking-wider font-bold">オンラインカウンセリング</span>
                         </a>
                     </div>
 
@@ -374,7 +374,7 @@
                     <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">Global Medical Network</span>
                     <h4 class="text-xl md:text-2xl font-bold text-slate-900 text-serif">世界最高峰の医療解析機関との堅固なアライアンス</h4>
                     <p class="text-sm md:text-base text-slate-600 leading-relaxed font-light">
-                        提携先の「Fertility Institute of Hawaii」、アメリカ最高峰の遺伝子検査・解析機関「INVITAE」、不妊医療の先進国ウクライナの「NADIYA研究所」など、世界最高レベルの医師・培養士チームと連携し、揺るぎない精度を提供しています。
+                        提携先の「Fertility Institute of Hawaii」、アメリカ最高峰の遺伝子検査・解析機関「INVITAE」、不妊医療の先進国ウクライナの「NADIYA研究所」など、世界最高レベル of 医師・培養士チームと連携し、揺るぎない精度を提供しています。
                     </p>
                 </div>
             </div>
@@ -395,7 +395,7 @@
                     日本国内の生殖医療ガイドラインのもとでは現在、性別確認のみを目的とした胚移植の選択や情報開示は一切行えません。
                 </p>
                 <p>
-                    一方で、私たちが提携しているアメリカ合衆国やウクライナといった国際基準の管轄下では、患者様ご夫婦のライフプランに応じた「家族形成 of 正当な選択肢」として、着床前診断プロセスにおけるすべての染色体（XX/XY）の情報開示が適法かつ一般的に提供されています。
+                    一方で、私たちが提携しているアメリカ合衆国やウクライナといった国際基準の管轄下では、患者様ご夫婦のライフプランに応じた「家族形成の正当な選択肢」として、着床前診断プロセスにおけるすべての染色体（XX/XY）の情報開示が適法かつ一般的に提供されています。
                 </p>
 
                 <!-- 当社のスタンス -->
@@ -672,7 +672,7 @@
                 <div class="space-y-6">
                     
                     <!-- LINE登録ボタン -->
-                    <a href="https://line.me" class="group w-full bg-brand-line hover:bg-brand-lineHover text-white font-bold py-4.5 rounded-2xl transition duration-300 shadow-lg shadow-brand-line/20 flex items-center justify-center gap-3 tracking-widest">
+                    <a href="https://line.me" class="group w-full bg-brand-line hover:bg-brand-lineHover text-white font-bold py-4 rounded-2xl transition duration-300 shadow-lg shadow-brand-line/20 flex items-center justify-center gap-3 tracking-widest">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-4.58-4.785-8.304-10.688-8.304-5.903 0-10.688 3.724-10.688 8.304 0 4.104 3.792 7.545 8.916 8.196l-1.076 3.25c-.12.36.262.695.58.468l6.388-4.46c3.488-.636 5.568-3.41 5.568-7.462zm-15.842 3.328c-.287 0-.52-.233-.52-.52v-3.76h-1.325c-.287 0-.52-.233-.52-.52s.233-.52.52-.52h2.365c.287 0 .52.233.52.52v4.28c0 .287-.233.52-.52.52zm3.32-.52c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v4.28zm5.27.52h-2.152c-.287 0-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52s.52.233.52.52v3.24h1.632c.287 0 .52.233.52.52s-.233.52-.52.52zm3.628-1.04c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-2.02l-1.42 2.37c-.105.176-.29.28-.49.28-.2 0-.385-.104-.49-.28l-1.42-2.37v2.02c0 .287-.233.52-.52.52s-.52-.233-.52-.52v-4.28c0-.287.233-.52.52-.52.2 0 .385.104.49.28l1.94 3.235 1.94-3.235c.105-.176.29-.28.49-.28.287 0 .52.233.52.52v4.28z"/></svg>
                         <span class="text-base">LINEで相談・伴走をはじめる</span>
                         <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
