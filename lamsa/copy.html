@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMSA（ラムサ）| ひとふれて、変わる。パウダーマッサージ・スキンシップレッスン</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lamsa: {
+                            bg: '#FAF7F2',
+                            card: '#F4EFE6',
+                            accent: '#D4A373',
+                            glow: '#E8B993',
+                            text: '#4A4238',
+                            muted: '#8C8275',
+                            dark: '#2A241E',
+                            gold: '#C59B63'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Shippori Mincho"', '"Cormorant Garamond"', 'serif'],
+                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        en: ['"Cormorant Garamond"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #4A4238;
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ニュアンスグラデーション・光の背景 */
+        .orb-glow {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232, 185, 147, 0.4) 0%, rgba(212, 163, 115, 0.1) 50%, rgba(250, 247, 242, 0) 70%);
+            filter: blur(40px);
+            pointer-events: none;
+        }
+
+        /* プレースホルダーの美しいダミーテクスチャ */
+        .ph-bg-1 {
+            background: linear-gradient(135deg, #EAD8C8 0%, #D8C3B0 100%);
+        }
+        .ph-bg-2 {
+            background: linear-gradient(135deg, #DFD6C8 0%, #CBBFA8 100%);
+        }
+        .ph-bg-3 {
+            background: linear-gradient(135deg, #E8DFD5 0%, #D2C4B4 100%);
+        }
+
+        /* アコーディオン */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 0.75rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#E8E1D5]/60">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo再現 -->
+            <a href="#" class="flex flex-col items-center">
+                <span class="font-en text-xl md:text-2xl tracking-[0.35em] text-lamsa-dark font-normal">LAMSA</span>
+                <span class="text-[9px] font-serif tracking-widest text-lamsa-muted -mt-1">ひとふれて、変わる。</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest font-medium text-lamsa-text">
+                <a href="#about" class="hover:text-lamsa-gold transition-colors">LAMSAとは</a>
+                <a href="#target" class="hover:text-lamsa-gold transition-colors">こんな方に</a>
+                <a href="#features" class="hover:text-lamsa-gold transition-colors">特徴</a>
+                <a href="#menu" class="hover:text-lamsa-gold transition-colors">レッスン</a>
+                <a href="#faq" class="hover:text-lamsa-gold transition-colors">よくある質問</a>
+            </nav>
+            <a href="#apply" class="bg-lamsa-dark text-[#FAF7F2] px-5 py-2.5 rounded-full text-xs tracking-widest font-serif hover:bg-lamsa-gold transition-all shadow-sm">
+                8月開講お申込み
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="orb-glow w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-[#F4EFE6] border border-[#E2D8C8] px-5 py-2 rounded-full mb-8 shadow-sm">
+                <span class="text-base">🌕</span>
+                <span class="text-xs font-serif tracking-widest text-lamsa-dark font-medium">8月18日開講予定 ｜ 対面リアルレッスン</span>
+            </div>
+
+            <!-- Big Logo Concept Header -->
+            <div class="py-4 mb-6">
+                <div class="w-16 h-16 rounded-full bg-[#E8B993]/30 mx-auto mb-2 blur-sm"></div>
+                <h1 class="font-en text-4xl md:text-6xl tracking-[0.4em] text-lamsa-dark font-light ml-[0.4em]">LAMSA</h1>
+                <div class="w-48 h-[1px] bg-gradient-to-r from-transparent via-[#C59B63] to-transparent mx-auto my-3"></div>
+                <p class="font-serif text-sm md:text-base tracking-[0.3em] text-lamsa-muted">ひとふれて、変わる。</p>
+            </div>
+
+            <h2 class="text-xl md:text-3xl font-serif text-lamsa-dark leading-relaxed tracking-widest mb-6">
+                2人の愛を確かめ合う、確かな方法。
+            </h2>
+
+            <p class="text-xs md:text-sm text-lamsa-text leading-loose max-w-lg mx-auto font-light mb-10 tracking-wider">
+                触れるレッスンで、シンプルな習慣から、2人の関係をより深く、豊かに。<br>
+                <span class="font-serif text-lamsa-gold font-normal border-b border-lamsa-gold/40 pb-0.5 inline-block mt-2">特別なことはいらない。ただ、触れ合うだけで。</span>
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                <a href="#apply" class="w-full sm:w-auto bg-lamsa-dark text-[#FAF7F2] px-8 py-3.5 rounded-full font-serif text-xs tracking-widest hover:bg-lamsa-gold transition-all shadow-md">
+                    詳細・先行予約へ
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-white/80 border border-[#D9CEBE] text-lamsa-text px-8 py-3.5 rounded-full text-xs tracking-widest hover:bg-lamsa-card transition-all">
+                    LAMSAのこだわり
+                </a>
+            </div>
+
+            <!-- Visual Card (ダミー背景で崩れない) -->
+            <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white h-72 md:h-96 ph-bg-1 flex items-end p-8 text-left">
+                <div class="absolute inset-0 bg-gradient-to-t from-lamsa-dark/60 via-transparent to-transparent"></div>
+                <div class="relative z-10 text-white font-serif">
+                    <p class="text-[10px] tracking-widest uppercase text-white/80">Physical & Emotional Connection</p>
+                    <p class="text-base md:text-lg tracking-wider mt-1">言葉を超える、優しい肌のコミュニケーション</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept -->
+    <section id="about" class="py-20 bg-[#F4EFE6]">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-lamsa-gold font-serif block mb-1">Concept</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark tracking-widest">触れ方が変わると、絆が変わる</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4 text-xs md:text-sm text-lamsa-text leading-relaxed font-light">
+                    <p class="font-serif text-base text-lamsa-dark leading-snug">
+                        「パートナーをもっと満足させたい」<br>
+                        「大切にされている実感をもっと届けたい」
+                    </p>
+                    <p>
+                        日々の忙しさの中で、いつの間にか後回しになりがちなスキンシップ。本当に必要なのは特別な演出ではありません。
+                    </p>
+                    <p>
+                        LAMSAがお伝えするのは、さらさらとしたシルクのような極上パウダーを使った**「新しい触れ合いのレッスン」**です。
+                    </p>
+                    <p>
+                        ベタつきもなく、服を着たままでもサッと始められるシンプルな習慣。繊細なフェザータッチが、パートナーの心を解きほぐします。
+                    </p>
+                </div>
+
+                <div class="ph-bg-2 h-72 rounded-2xl border-2 border-white shadow-md flex items-center justify-center text-center p-6 text-lamsa-dark">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-white">
+                        <p class="font-serif text-[10px] text-lamsa-gold tracking-widest mb-1">FEATHER TOUCH</p>
+                        <p class="text-xs font-medium leading-relaxed">力はいらない。<br>滑らせるだけで極上の心地よさへ。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target -->
+    <section id="target" class="py-20 bg-FAF7F2">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-lamsa-gold font-serif block mb-1">For You</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark tracking-widest">このような方におすすめです</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Women -->
+                <div class="bg-white rounded-2xl p-6 border border-[#E8E1D5] shadow-sm relative">
+                    <span class="absolute top-4 right-4 bg-[#F7EBE1] text-lamsa-gold font-serif text-[10px] px-3 py-1 rounded-full">FOR WOMEN</span>
+                    <h3 class="text-lg font-serif text-lamsa-dark mb-4 mt-2">彼を満足させたい女性</h3>
+                    <ul class="space-y-2.5 text-xs text-lamsa-text font-light mb-6">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-lamsa-gold mt-0.5"></i><span>彼をもっと喜ばせたいが方法がわからない</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-lamsa-gold mt-0.5"></i><span>オイルのベタつきや準備・後処理が苦手</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-lamsa-gold mt-0.5"></i><span>力をかけずに、女性らしいタッチを学びたい</span></li>
+                    </ul>
+                    <div class="p-3 bg-[#FAF7F2] rounded-lg text-[11px] text-lamsa-dark font-medium">
+                        ✨ 力が必要ないため疲れません。日常のベッドタイムにすぐ活かせます。
+                    </div>
+                </div>
+
+                <!-- Men -->
+                <div class="bg-white rounded-2xl p-6 border border-[#E8E1D5] shadow-sm relative">
+                    <span class="absolute top-4 right-4 bg-[#E8EFEF] text-[#4A7272] font-serif text-[10px] px-3 py-1 rounded-full">FOR MEN</span>
+                    <h3 class="text-lg font-serif text-lamsa-dark mb-4 mt-2">彼女を喜ばせたい・洗練されたい男性</h3>
+                    <ul class="space-y-2.5 text-xs text-lamsa-text font-light mb-6">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#4A7272] mt-0.5"></i><span>彼女やパートナーを本当に満足させられているか不安</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#4A7272] mt-0.5"></i><span>力任せではなく、女性がうっとりするタッチを知りたい</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#4A7272] mt-0.5"></i><span>自己流を卒業し「上手い」を超えた安心感を与えたい</span></li>
+                    </ul>
+                    <div class="p-3 bg-[#FAF7F2] rounded-lg text-[11px] text-lamsa-dark font-medium">
+                        ✨ 女性の本音に基づいた指導。「大切にされている」と思わせる技術へ。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-[#F4EFE6]">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-lamsa-gold font-serif block mb-1">Features</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark tracking-widest">LAMSAレッスンの3つの特徴</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 text-center border border-[#E8E1D5]">
+                    <div class="w-10 h-10 rounded-full bg-[#FAF7F2] text-lamsa-gold font-serif text-base flex items-center justify-center mx-auto mb-4">01</div>
+                    <h3 class="text-sm font-serif text-lamsa-dark mb-2">準備不要・ベタつかない<br>手軽なパウダー</h3>
+                    <p class="text-[11px] text-lamsa-text font-light leading-relaxed">オイルの拭き取り不要。服を着たままや部屋着のままでも心地よい触れ合いが始まります。</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 text-center border border-[#E8E1D5]">
+                    <div class="w-10 h-10 rounded-full bg-[#FAF7F2] text-lamsa-gold font-serif text-base flex items-center justify-center mx-auto mb-4">02</div>
+                    <h3 class="text-sm font-serif text-lamsa-dark mb-2">すぐに再現できる<br>フェザータッチ法則</h3>
+                    <p class="text-[11px] text-lamsa-text font-light leading-relaxed">手の密着度・スピード・強弱の基本ルールを覚えるだけで、驚くほど感覚が変わります。</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 text-center border border-[#E8E1D5]">
+                    <div class="w-10 h-10 rounded-full bg-[#FAF7F2] text-lamsa-gold font-serif text-base flex items-center justify-center mx-auto mb-4">03</div>
+                    <h3 class="text-sm font-serif text-lamsa-dark mb-2">対面だから伝わる<br>「感覚の答え合わせ」</h3>
+                    <p class="text-[11px] text-lamsa-text font-light leading-relaxed">動画では伝えきれない実際の圧の強さや気持ちよさを、直接その場で体感できます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-20 bg-FAF7F2">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-lamsa-gold font-serif block mb-1">Lesson Menu</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark tracking-widest">対面レッスン・イベント案内</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-white rounded-2xl border border-[#E8E1D5] p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-serif text-lamsa-gold tracking-widest block mb-1">EVENT / WORKSHOP</span>
+                        <h3 class="text-base font-serif text-lamsa-dark mb-3">【体験】基礎ワークショップ</h3>
+                        <p class="text-[11px] text-lamsa-text font-light leading-relaxed mb-4">服を着たまま手や腕を使った触れ合いの基礎を体験する1回完結イベント。</p>
+                    </div>
+                    <a href="#apply" class="block text-center bg-lamsa-dark text-white text-[11px] py-2.5 rounded-xl font-serif">詳細を見る</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-white rounded-2xl border-2 border-lamsa-gold p-6 flex flex-col justify-between relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-lamsa-gold text-white text-[9px] font-serif px-3 py-0.5 rounded-full">人気 No.1</span>
+                    <div>
+                        <span class="text-[10px] font-serif text-lamsa-gold tracking-widest block mb-1">PAIR LESSON</span>
+                        <h3 class="text-base font-serif text-lamsa-dark mb-3">【カップル限定】絆を深める2人レッスン</h3>
+                        <p class="text-[11px] text-lamsa-text font-light leading-relaxed mb-4">パートナーと一緒に参加し、お互いに触れ合いながら体得する実践コース。</p>
+                    </div>
+                    <a href="#apply" class="block text-center bg-lamsa-gold text-white text-[11px] py-2.5 rounded-xl font-serif">ペアレッスン予約</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-white rounded-2xl border border-[#E8E1D5] p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-serif text-lamsa-gold tracking-widest block mb-1">PERSONAL</span>
+                        <h3 class="text-base font-serif text-lamsa-dark mb-3">【マンツーマン】密着指導</h3>
+                        <p class="text-[11px] text-lamsa-text font-light leading-relaxed mb-4">「本気で技術を極めたい」方向け。講師による1対1個室指導。</p>
+                    </div>
+                    <a href="#apply" class="block text-center bg-lamsa-dark text-white text-[11px] py-2.5 rounded-xl font-serif">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-[#F4EFE6]">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-lamsa-gold font-serif block mb-1">FAQ</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark tracking-widest">よくあるご質問</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-item bg-white rounded-xl border border-[#E8E1D5] px-5 py-3.5 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs md:text-sm font-serif text-lamsa-dark">Q. 服を着たままでも受講できますか？</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon text-lamsa-gold text-[10px] transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-xs text-lamsa-text font-light leading-relaxed">
+                        はい、可能です。手や腕、首元など露出部分や服越しでも十分に高い効果と心地よさを実感していただけます。
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-[#E8E1D5] px-5 py-3.5 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs md:text-sm font-serif text-lamsa-dark">Q. お一人（単身）での参加は可能ですか？</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon text-lamsa-gold text-[10px] transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-xs text-lamsa-text font-light leading-relaxed">
+                        大歓迎です。体験ワークショップやマンツーマンでは講師・モデルの手・腕を使って実践練習を行います。
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-[#E8E1D5] px-5 py-3.5 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs md:text-sm font-serif text-lamsa-dark">Q. 力加減がわからない不器用でも大丈夫ですか？</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon text-lamsa-gold text-[10px] transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-xs text-lamsa-text font-light leading-relaxed">
+                        全く問題ありません。パウダーを使うことで力を入れずに滑らせるだけで気持ちよくなります。講師が直接正解をお伝えします。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply CTA -->
+    <section id="apply" class="py-20 bg-FAF7F2 border-t border-[#E8E1D5]">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <div class="mb-4">
+                <span class="font-en text-2xl tracking-[0.3em] text-lamsa-dark">LAMSA</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-serif text-lamsa-dark mb-4 tracking-widest">
+                ひとふれて、変わる。<br>2人の新しい習慣をここから。
+            </h2>
+            <p class="text-xs text-lamsa-text font-light leading-relaxed mb-8">
+                8月18日開講の対面レッスン・体験イベントのお申込みは公式LINE・SNSにて受付中です。
+            </p>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#E8E1D5] shadow-sm max-w-md mx-auto space-y-3">
+                <a href="#" class="flex items-center justify-center gap-2 bg-[#06C755] text-white py-3 rounded-xl font-serif text-xs tracking-widest shadow-sm">
+                    <i class="fa-brands fa-line text-lg"></i>
+                    <span>公式LINEで先行予約・ご相談</span>
+                </a>
+                <a href="https://www.instagram.com/lamsa_lsn" target="_blank" class="flex items-center justify-center gap-2 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white py-3 rounded-xl font-serif text-xs tracking-widest shadow-sm">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                    <span>Instagram DMからお問い合わせ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-lamsa-dark text-[#FAF7F2] py-12 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-6 space-y-4">
+            <span class="font-en text-2xl tracking-[0.35em] block text-[#EAD8C8]">LAMSA</span>
+            <p class="font-serif text-[11px] text-[#A39788]">ひとふれて、変わる。</p>
+            <div class="text-[10px] text-[#8C8275] pt-4 border-t border-white/10">
+                &copy; 2026 LAMSA All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
